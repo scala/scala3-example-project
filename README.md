@@ -2,6 +2,7 @@
 
 ### Requirements
 
+Until artifacts are published, you'll need to compile the dependencies:
 ```shell
 git clone https://github.com/lampepfl/dotty.git
 cd dotty

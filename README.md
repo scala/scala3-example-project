@@ -26,5 +26,11 @@ cd ..
 
 ### Usage
 
-Run sbt as usual, see https://github.com/smarter/dotty-bridge#todo for what
-works and what doesn't.
+Run sbt as usual, see
+https://github.com/smarter/dotty-bridge#implementation-status for what works and
+what doesn't.
+
+### Discuss
+
+Feel free to come chat with us on the
+[Dotty gitter](http://gitter.im/lampepfl/dotty)!

@@ -12,9 +12,8 @@ mkdir resources && echo "version.number=0.1-SNAPSHOT" > resources/compiler.prope
 sbt publishLocal
 cd ..
 
-git clone https://github.com/smarter/sbt.git
+git checkout -b 0.13-dotty https://github.com/smarter/sbt.git
 cd sbt
-git checkout 0.13-dotty
 sbt publishLocal
 cd ..
 

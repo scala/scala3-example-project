@@ -7,9 +7,6 @@ Until artifacts are published, you'll need to compile the dependencies:
 git clone https://github.com/lampepfl/dotty.git
 cd dotty
 
-## This step won't be needed once https://github.com/lampepfl/dotty/pull/1013 has been merged
-mkdir resources && echo "version.number=0.1-SNAPSHOT" > resources/compiler.properties
-
 sbt publishLocal
 cd ..
 

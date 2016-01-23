@@ -2,17 +2,11 @@
 
 ### Requirements
 
-Until artifacts are published, you'll need to compile the dependencies:
+Until artifacts are published, you'll need to compile Dotty and its compiler
+bridge yourself:
 ```shell
 git clone https://github.com/lampepfl/dotty.git
 cd dotty
-
-sbt publishLocal
-cd ..
-
-## This step won't be needed once sbt 0.13.10 is released
-git checkout -b 0.13 https://github.com/sbt/sbt.git
-cd sbt
 sbt publishLocal
 cd ..
 

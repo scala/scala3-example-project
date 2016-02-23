@@ -18,9 +18,13 @@ cd ..
 
 ### Usage
 
-Run sbt as usual, see
+This is a normal sbt project, you can compile code with `sbt compile` and run it
+with `sbt run`. See
 https://github.com/smarter/dotty-bridge#implementation-status for what works and
 what doesn't.
+
+If compiling this example project fails, you probably have a global sbt plugin
+that does not work with dotty, try to disable all plugins in `~/.sbt/0.13/plugins`.
 
 ### Discuss
 

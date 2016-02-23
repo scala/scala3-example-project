@@ -24,7 +24,13 @@ https://github.com/smarter/dotty-bridge#implementation-status for what works and
 what doesn't.
 
 If compiling this example project fails, you probably have a global sbt plugin
-that does not work with dotty, try to disable all plugins in `~/.sbt/0.13/plugins`.
+that does not work with dotty, try to disable all plugins in
+`~/.sbt/0.13/plugins`.
+
+### Using Dotty in your own project
+
+1. [Use sbt 0.13.11 or newer](https://github.com/smarter/dotty-example-project/blob/master/project/build.properties).
+2. Configure your build like explained in [build.sbt](https://github.com/smarter/dotty-example-project/blob/master/build.sbt#L9-L10)
 
 ### Discuss
 

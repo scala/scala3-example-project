@@ -3,8 +3,11 @@ lazy val root = (project in file(".")).
     name := "dotty-example-project",
     description := "Example sbt project that compiles using Dotty",
     version := "0.1",
-
     mainClass in (Compile, run) := Some("Hello"),
+
+
+    // All the settings set below this line are important to get your project
+    // to compile with Dotty. Please read the comments carefully.
 
     // Dotty version
     scalaVersion := "0.1-SNAPSHOT",

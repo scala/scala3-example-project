@@ -9,6 +9,15 @@ lazy val root = (project in file(".")).
     // Dotty version
     scalaVersion := "0.1-SNAPSHOT",
 
+    // Enable Scala 2 compatibility mode.
+    // This will allow you to use Scala 2 features that have been removed
+    // from Dotty, like procedure syntax.
+    // This is not required to compile code with Dotty, but it makes it easier
+    // to test Dotty on an existing Scala 2 code base.
+    // The long-term plan is to have a rewriting tool that can do most of the
+    // porting work for you.
+    scalacOptions ++= Seq("-language:Scala2"),
+
     // Note: Dotty can use Scala 2.11 libraries so we set `scalaBinaryVersion`
     // to `2.11` for convenience. However, if you publish an artefact compiled
     // with Dotty, you should set it to `0.1`, this will force you to change

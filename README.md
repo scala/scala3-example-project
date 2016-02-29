@@ -7,7 +7,7 @@ bridge yourself:
 ```shell
 git clone https://github.com/lampepfl/dotty.git
 cd dotty
-sbt publishLocal
+sbt ";dotty-interfaces/publishLocal;publishLocal"
 cd ..
 
 git clone https://github.com/smarter/dotty-bridge.git

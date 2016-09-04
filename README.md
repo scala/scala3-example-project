@@ -2,26 +2,17 @@
 
 ### Requirements
 
-Until artifacts are published, you'll need to compile Dotty and its compiler
-bridge yourself:
+Until artifacts are published, you'll need to compile Dotty yourself:
 ```shell
 git clone https://github.com/lampepfl/dotty.git
 cd dotty
-sbt ";dotty-interfaces/publishLocal;publishLocal"
-cd ..
-
-git clone https://github.com/smarter/dotty-bridge.git
-cd dotty-bridge
-sbt publishLocal
-cd ..
+sbt ";dotty-interfaces/publishLocal;dotty-bridge/publishLocal;publishLocal"
 ```
 
 ### Usage
 
 This is a normal sbt project, you can compile code with `sbt compile` and run it
-with `sbt run`. See
-https://github.com/smarter/dotty-bridge#implementation-status for what works and
-what doesn't.
+with `sbt run`, `sbt console` will start a Dotty REPL.
 
 If compiling this example project fails, you probably have a global sbt plugin
 that does not work with dotty, try to disable all plugins in

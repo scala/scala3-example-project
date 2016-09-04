@@ -16,7 +16,7 @@ with `sbt run`, `sbt console` will start a Dotty REPL.
 
 If compiling this example project fails, you probably have a global sbt plugin
 that does not work with dotty, try to disable all plugins in
-`~/.sbt/0.13/plugins`.
+`~/.sbt/0.13/plugins` and `~/.sbt/0.13`.
 
 ### Using Dotty in your own project
 

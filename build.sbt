@@ -12,13 +12,14 @@ lazy val root = (project in file(".")).
     scalaOrganization := "ch.epfl.lamp",
 
     // Enable Scala 2 compatibility mode.
-    // This will allow you to use Scala 2 features that have been removed
-    // from Dotty, like procedure syntax.
-    // This is not required to compile code with Dotty, but it makes it easier
-    // to test Dotty on an existing Scala 2 code base.
-    // The long-term plan is to have a rewriting tool that can do most of the
-    // porting work for you.
-    scalacOptions ++= Seq("-language:Scala2"),
+    // This allows you to use Scala 2 features that have been removed
+    // from Dotty, like procedure syntax, thus making it easier to test
+    // Dotty on an existing Scala 2 code base.
+    // A rewriting tool that can do the porting for you is currently in
+    // development at https://github.com/scalacenter/scalafix
+    // Note that this affects typechecking and thus may prevent some valid
+    // Dotty code from compiling, so it is not enabled by default.
+    // scalacOptions ++= Seq("-language:Scala2"),
 
     // Note: Dotty can use Scala 2.11 libraries so we set `scalaBinaryVersion`
     // to `2.11` for convenience. However, if you publish an artefact compiled

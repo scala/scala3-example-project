@@ -1,7 +1,10 @@
-class A {
+trait Base {
+  def message: String
+}
+class A extends Base {
   def message: String = "Hello"
 }
-class B {
+class B extends Base {
   def message: String = "Dotty!"
 }
 

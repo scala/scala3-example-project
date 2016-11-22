@@ -35,6 +35,6 @@ lazy val root = (project in file(".")).
     // avoid trouble.
     libraryDependencies += "org.scala-lang" % "scala-library" % "2.11.5",
 
-    // Maintained at https://github.com/lampepfl/dotty/tree/master/bridge
-    scalaCompilerBridgeSource := ("ch.epfl.lamp" % "dotty-bridge" % "0.1.1-SNAPSHOT" % "component").sources()
+    // Maintained at https://github.com/lampepfl/dotty/tree/master/sbt-bridge
+    scalaCompilerBridgeSource := ("ch.epfl.lamp" % "dotty-sbt-bridge" % "0.1.1-SNAPSHOT" % "component").sources()
   )

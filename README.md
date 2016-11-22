@@ -6,7 +6,7 @@ Until artifacts are published, you'll need to compile Dotty yourself:
 ```shell
 git clone https://github.com/lampepfl/dotty.git
 cd dotty
-sbt ";dotty-interfaces/publishLocal;dotty-bridge/publishLocal;publishLocal"
+sbt publishLocal
 ```
 
 ### Usage

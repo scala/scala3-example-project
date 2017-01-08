@@ -8,7 +8,7 @@ lazy val root = (project in file(".")).
     // to compile with Dotty. Please read the comments carefully.
 
     // Dotty version
-    scalaVersion := "0.1-SNAPSHOT",
+    scalaVersion := "0.1.1-SNAPSHOT",
     scalaOrganization := "ch.epfl.lamp",
 
     // Enable Scala 2 compatibility mode.
@@ -29,5 +29,5 @@ lazy val root = (project in file(".")).
     scalaBinaryVersion := "2.11",
 
     // Maintained at https://github.com/lampepfl/dotty/tree/master/sbt-bridge
-    scalaCompilerBridgeSource := ("ch.epfl.lamp" % "dotty-sbt-bridge" % "0.1.1-SNAPSHOT" % "component").sources()
+    scalaCompilerBridgeSource := ("ch.epfl.lamp" % "dotty-sbt-bridge" % scalaVersion.value % "component").sources()
   )

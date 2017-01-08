@@ -28,13 +28,6 @@ lazy val root = (project in file(".")).
     // instead of `"org.foo" %% "bar" % "1.0"`
     scalaBinaryVersion := "2.11",
 
-    // By default, sbt will depend on the scala-library version `scalaVersion`,
-    // so we need to override it.
-    autoScalaLibrary := false,
-    // 2.11.5 is the version used by Dotty itself currently, we do the same to
-    // avoid trouble.
-    libraryDependencies += "org.scala-lang" % "scala-library" % "2.11.5",
-
     // Maintained at https://github.com/lampepfl/dotty/tree/master/sbt-bridge
     scalaCompilerBridgeSource := ("ch.epfl.lamp" % "dotty-sbt-bridge" % "0.1.1-SNAPSHOT" % "component").sources()
   )

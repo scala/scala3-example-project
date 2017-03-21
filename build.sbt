@@ -26,8 +26,5 @@ lazy val root = (project in file(".")).
     // with Dotty, you should set it to `0.1`, this will force you to change
     // your library dependencies to be of the form `"org.foo" % "bar_2.11" % "1.0"`
     // instead of `"org.foo" %% "bar" % "1.0"`
-    scalaBinaryVersion := "2.11",
-
-    // Maintained at https://github.com/lampepfl/dotty/tree/master/sbt-bridge
-    scalaCompilerBridgeSource := ("ch.epfl.lamp" % "dotty-sbt-bridge" % scalaVersion.value % "component").sources()
+    scalaBinaryVersion := "2.11"
   )

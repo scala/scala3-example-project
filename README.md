@@ -20,7 +20,7 @@ that does not work with dotty, try to disable all plugins in
 
 ### Using Dotty in your own project
 
-1. [Use sbt 0.13.11 (other versions are not supported)](https://github.com/smarter/dotty-example-project/blob/master/project/build.properties).
+1. [Use sbt 0.13.14-RC2 (other versions are not supported)](https://github.com/smarter/dotty-example-project/blob/master/project/build.properties).
 2. Configure your build like explained in [build.sbt](https://github.com/smarter/dotty-example-project/blob/master/build.sbt#L7-L8)
 
 ### Discuss

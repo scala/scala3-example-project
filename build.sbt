@@ -8,7 +8,7 @@ lazy val root = (project in file(".")).
     // to compile with Dotty. Please read the comments carefully.
 
     // Dotty version
-    scalaVersion := "0.1.1-SNAPSHOT",
+    scalaVersion := "0.1.1-bin-SNAPSHOT",
     scalaOrganization := "ch.epfl.lamp",
 
     // Enable Scala 2 compatibility mode.

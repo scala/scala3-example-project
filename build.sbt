@@ -11,6 +11,9 @@ lazy val root = (project in file(".")).
     scalaVersion := "0.1.1-bin-SNAPSHOT",
     scalaOrganization := "ch.epfl.lamp",
 
+    // Needed because of https://github.com/sbt/sbt/issues/3012
+    resolvers += Resolver.typesafeIvyRepo("releases"),
+
     // Enable Scala 2 compatibility mode.
     // This allows you to use Scala 2 features that have been removed
     // from Dotty, like procedure syntax, thus making it easier to test

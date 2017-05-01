@@ -9,10 +9,11 @@ lazy val root = (project in file(".")).
 
     // Dotty version
     scalaVersion := "0.1.1-bin-SNAPSHOT",
+    scalaBinaryVersion := "0.1",
     scalaOrganization := "ch.epfl.lamp",
 
     // Needed because of https://github.com/sbt/sbt/issues/3012
-    resolvers += Resolver.typesafeIvyRepo("releases"),
+    resolvers += Resolver.typesafeIvyRepo("releases")
 
     // Enable Scala 2 compatibility mode.
     // This allows you to use Scala 2 features that have been removed
@@ -22,12 +23,5 @@ lazy val root = (project in file(".")).
     // development at https://github.com/scalacenter/scalafix
     // Note that this affects typechecking and thus may prevent some valid
     // Dotty code from compiling, so it is not enabled by default.
-    // scalacOptions ++= Seq("-language:Scala2"),
-
-    // Note: Dotty can use Scala 2.11 libraries so we set `scalaBinaryVersion`
-    // to `2.11` for convenience. However, if you publish an artefact compiled
-    // with Dotty, you should set it to `0.1`, this will force you to change
-    // your library dependencies to be of the form `"org.foo" % "bar_2.11" % "1.0"`
-    // instead of `"org.foo" %% "bar" % "1.0"`
-    scalaBinaryVersion := "2.11"
+    // scalacOptions ++= Seq("-language:Scala2")
   )

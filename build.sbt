@@ -10,7 +10,7 @@ lazy val root = (project in file(".")).
     // Dotty version
     scalaVersion := "0.1.1-bin-SNAPSHOT",
     scalaBinaryVersion := "0.1",
-    scalaOrganization := "ch.epfl.lamp",
+    scalaOrganization := "ch.epfl.lamp"
 
     // Enable Scala 2 compatibility mode.
     // This allows you to use Scala 2 features that have been removed

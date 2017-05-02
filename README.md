@@ -6,7 +6,7 @@ Until artifacts are published, you'll need to compile Dotty yourself:
 ```shell
 git clone --recursive https://github.com/lampepfl/dotty.git
 cd dotty
-sbt publishLocal
+sbt dotty-bootstrapped/publishLocal
 ```
 
 ### Usage

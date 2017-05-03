@@ -4,5 +4,5 @@ lazy val root = (project in file(".")).
     description := "Example sbt project that compiles using Dotty",
     version := "0.1",
 
-    scalaVersion := "0.1.1-bin-SNAPSHOT"
+    scalaVersion := "0.1.1-bin-20170502-df22149-NIGHTLY"
   )

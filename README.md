@@ -9,6 +9,11 @@ If compiling this example project fails, you probably have a global sbt plugin
 that does not work with dotty, try to disable all plugins in
 `~/.sbt/0.13/plugins` and `~/.sbt/0.13`.
 
+### Tamplate projects
+The fastest way to have a new project in dotty is using one of the following templates:
+*  [Dotty Hello World](https://github.com/lampepfl/dotty-hello-world.g8)
+*  [Dotty Hello World (cross compiling with Scala 2)](https://github.com/lampepfl/dotty-hello-world-coss.g8)
+
 ### Using Dotty in your own project
 
 #### project/plugins.sbt

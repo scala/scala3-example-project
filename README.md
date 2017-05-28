@@ -34,7 +34,7 @@ Any version number that starts with `0.` is automatically by the `sbt-dotty`
 plugin, you don't need to set up anything:
 
 ```scala
-scalaVersion := "0.1.1-bin-20170502-df22149-NIGHTLY"
+scalaVersion := "0.1.1-bin-20170527-8b0aca2-NIGHTLY"
 ```
 
 New builds of dotty are published nightly, scroll to the end of

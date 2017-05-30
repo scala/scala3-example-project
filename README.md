@@ -18,7 +18,7 @@ The fastest way to have a new project in dotty is using one of the following tem
 
 #### project/plugins.sbt
 ```scala
-addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.1.0")
+addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.1.1")
 ```
 
 #### project/build.properties
@@ -34,7 +34,7 @@ Any version number that starts with `0.` is automatically recognized as Dotty by
 the `sbt-dotty` plugin, you don't need to set up anything:
 
 ```scala
-scalaVersion := "0.1.1-bin-20170527-8b0aca2-NIGHTLY"
+scalaVersion := "0.1.2-RC1"
 ```
 
 New builds of dotty are published nightly, scroll to the end of

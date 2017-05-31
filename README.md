@@ -1,5 +1,7 @@
 ## Example sbt project that compiles using Dotty
 
+[![Build Status](https://travis-ci.org/lampepfl/dotty-example-project.svg?branch=master)](https://travis-ci.org/lampepfl/dotty-example-project)
+
 ### Usage
 
 This is a normal sbt project, you can compile code with `sbt compile` and run it

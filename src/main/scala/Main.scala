@@ -1,22 +1,28 @@
-trait Base {
-  def message: String
-}
-class A extends Base {
-  def message: String = "Hello"
-}
-class B extends Base {
-  def message: String = "Dotty!"
-}
 
-object Hello {
-  // Union types only exist in Dotty, so there's no chance that this will
-  // accidentally be compiled with Scala 2
-  def printMessages(msgs: (A | B)*) = println(msgs.map(_.message).mkString(" "))
+object Main {
+
   def main(args: Array[String]): Unit = {
-    printMessages(new A, new B)
 
-    // Sanity check the classpath: this won't run if the dotty jar is not present.
-    val x: Int => Int = z => z
-    x(1)
+    runExample("Trait Params")(TraitParams.test)
+
+    runExample("Enum Types")(EnumTypes.test)
+
+    runExample("Implicit Functions")(ImplicitFunctions.test)
+
+    runExample("Implicit Params")(ImplicitParams.test)
+
+    runExample("Union Types")(UnionTypes.test)
+
+    runExample("Intersection Types")(IntersectionTypes.test)
+
+    runExample("Type Lambda")(TypeLambdas.test)
+
   }
+
+  private def runExample(name: String)(f: => Unit) = {
+    println(Console.MAGENTA + s"$name example:" + Console.RESET)
+    f
+    println()
+  }
+
 }

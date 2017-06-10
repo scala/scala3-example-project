@@ -40,9 +40,9 @@ scalaVersion := "0.1.2-RC1"
 ```
 
 New builds of dotty are published nightly, scroll to the end of
-https://repo1.maven.org/maven2/ch/epfl/lamp/dotty_0.1/ to find the latest version
+https://repo1.maven.org/maven2/ch/epfl/lamp/dotty_0.2/ to find the latest version
 number. Alternatively, you can set `scalaVersion := dottyLatestNightlyBuild.get`
-to automatically use the latest nightly build of dotty.
+to always use the latest nightly build of dotty.
 
 If you want to migrate an existing library, it might be a good idea to start out
 with the compatibility mode (note that this mode affects typechecking and thus

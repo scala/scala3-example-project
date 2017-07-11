@@ -23,8 +23,8 @@ object UnionTypes {
   }
 
   private def either[A, B](division: Division) = division match {
-    case DivisionByZero(m: String) => Left(m)
-    case Success(d: Double) => Right(d)
+    case DivisionByZero(m) => Left(m)
+    case Success(d) => Right(d)
   }
 
   def test: Unit = {

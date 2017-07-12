@@ -1,8 +1,8 @@
-## Example sbt project that compiles using Dotty
+# Example sbt project that compiles using Dotty
 
 [![Build Status](https://travis-ci.org/lampepfl/dotty-example-project.svg?branch=master)](https://travis-ci.org/lampepfl/dotty-example-project)
 
-### Usage
+## Usage
 
 This is a normal sbt project, you can compile code with `sbt compile` and run it
 with `sbt run`, `sbt console` will start a Dotty REPL.
@@ -11,19 +11,19 @@ If compiling this example project fails, you probably have a global sbt plugin
 that does not work with dotty, try to disable all plugins in
 `~/.sbt/0.13/plugins` and `~/.sbt/0.13`.
 
-### Template projects
+## Template projects
 The fastest way to have a new project in dotty is using one of the following templates:
 *  [Dotty Template Project](https://github.com/lampepfl/dotty.g8)
 *  [Dotty Template Project (cross compiling with Scala 2)](https://github.com/lampepfl/dotty-cross.g8)
 
-### Using Dotty in your own project
+## Using Dotty in your own project
 
-#### project/plugins.sbt
+### project/plugins.sbt
 ```scala
 addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.1.3")
 ```
 
-#### project/build.properties
+### project/build.properties
 ```scala
 sbt.version=0.13.15
 ```
@@ -31,7 +31,7 @@ sbt.version=0.13.15
 Older versions of sbt are not supported.
 
 
-#### build.sbt
+### build.sbt
 Any version number that starts with `0.` is automatically recognized as Dotty by
 the `sbt-dotty` plugin, you don't need to set up anything:
 
@@ -78,12 +78,12 @@ works because Dotty is currently retro-compatible with Scala 2.x.
 **NOTE**: Dotty's retro-compatibility with Scala 2.x will be dropped before
 Dotty is released, you should not rely on it.
 
-### IDE support
+## IDE support
 
 Dotty comes built-in with IDE support, to try it out see
 http://dotty.epfl.ch/docs/usage/ide-support.html
 
-### Discuss
+## Discuss
 
 Feel free to come chat with us on the
 [Dotty gitter](http://gitter.im/lampepfl/dotty)!

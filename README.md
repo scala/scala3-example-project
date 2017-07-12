@@ -39,8 +39,8 @@ the `sbt-dotty` plugin, you don't need to set up anything:
 scalaVersion := "0.2.0-RC1"
 ```
 
-New builds of dotty are published nightly, scroll to the end of
-https://repo1.maven.org/maven2/ch/epfl/lamp/dotty_0.2/ to find the latest version
+New builds of dotty are published nightly, look at the bottom of
+https://repo1.maven.org/maven2/ch/epfl/lamp/dotty_0.3/ to find the latest version
 number. Alternatively, you can set `scalaVersion := dottyLatestNightlyBuild.get`
 to always use the latest nightly build of dotty.
 

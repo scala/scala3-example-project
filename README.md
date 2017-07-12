@@ -78,6 +78,10 @@ works because Dotty is currently retro-compatible with Scala 2.x.
 **NOTE**: Dotty's retro-compatibility with Scala 2.x will be dropped before
 Dotty is released, you should not rely on it.
 
+### IDE support
+
+Dotty comes built-in with IDE support, to try it out see
+http://dotty.epfl.ch/docs/usage/ide-support.html
 
 ### Discuss
 

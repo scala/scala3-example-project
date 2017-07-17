@@ -11,12 +11,19 @@ If compiling this example project fails, you probably have a global sbt plugin
 that does not work with dotty, try to disable all plugins in
 `~/.sbt/0.13/plugins` and `~/.sbt/0.13`.
 
+### IDE support
+
+Dotty comes built-in with IDE support, to try it out see
+http://dotty.epfl.ch/docs/usage/ide-support.html
+
 ## Making a new Dotty project
 The fastest way to start a new Dotty project is to use one of the following templates:
 * [Simple Dotty project](https://github.com/lampepfl/dotty.g8)
 * [Dotty project that cross-compiles with Scala 2](https://github.com/lampepfl/dotty-cross.g8)
 
 ## Using Dotty in an existing project
+
+You will need to make the following adjustments to your build:
 
 ### project/plugins.sbt
 ```scala
@@ -39,14 +46,18 @@ the `sbt-dotty` plugin, you don't need to set up anything:
 scalaVersion := "0.2.0-RC1"
 ```
 
-New builds of dotty are published nightly, look at the bottom of
-https://repo1.maven.org/maven2/ch/epfl/lamp/dotty_0.3/ to find the latest version
-number. Alternatively, you can set `scalaVersion := dottyLatestNightlyBuild.get`
-to always use the latest nightly build of dotty.
+#### Nightly builds
+If the latest release of Dotty is missing a bugfix or feature you need, you may
+wish to use a nightly build. Look at the bottom of
+https://repo1.maven.org/maven2/ch/epfl/lamp/dotty_0.3/ to find the version
+number for the latest nightly build. Alternatively, you can set `scalaVersion :=
+dottyLatestNightlyBuild.get` to always use the latest nightly build of dotty.
 
-If you want to migrate an existing library, it might be a good idea to start out
-with the compatibility mode (note that this mode affects typechecking and thus
-may prevent some valid Dotty code from compiling) by adding to `build.sbt`:
+## Getting your project to compile with Dotty
+
+When porting an existing project, it's a good idea to start out with the Scala 2
+compatibility mode (note that this mode affects typechecking and thus may
+prevent some valid Dotty code from compiling) by adding to your `build.sbt`:
 
 ```scala
 scalacOptions ++= { if (isDotty.value) Seq("-language:Scala2") else Nil }
@@ -77,11 +88,6 @@ works because Dotty is currently retro-compatible with Scala 2.x.
 
 **NOTE**: Dotty's retro-compatibility with Scala 2.x will be dropped before
 Dotty is released, you should not rely on it.
-
-## IDE support
-
-Dotty comes built-in with IDE support, to try it out see
-http://dotty.epfl.ch/docs/usage/ide-support.html
 
 ## Discuss
 

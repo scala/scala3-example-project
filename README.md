@@ -11,12 +11,12 @@ If compiling this example project fails, you probably have a global sbt plugin
 that does not work with dotty, try to disable all plugins in
 `~/.sbt/0.13/plugins` and `~/.sbt/0.13`.
 
-## Template projects
+## Making a new Dotty project
 The fastest way to start a new Dotty project is to use one of the following templates:
 * [Simple Dotty project](https://github.com/lampepfl/dotty.g8)
 * [Dotty project that cross-compiles with Scala 2](https://github.com/lampepfl/dotty-cross.g8)
 
-## Using Dotty in your own project
+## Using Dotty in an existing project
 
 ### project/plugins.sbt
 ```scala

@@ -20,7 +20,7 @@ The fastest way to have a new project in dotty is using one of the following tem
 
 ### project/plugins.sbt
 ```scala
-addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.1.3")
+addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.1.4")
 ```
 
 ### project/build.properties

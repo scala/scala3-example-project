@@ -36,8 +36,8 @@ object UnionTypes {
     // calling `either` function with union typed value.
     println(either(divisionResultFailure))
 
-    val list: Cons | Empty = Cons(1, Cons(2, Cons(3, Empty())))
-    val emptyList: Empty | Cons = Empty()
+    val list: Cons[Int] | Empty = Cons(1, Cons(2, Cons(3, Empty())))
+    val emptyList: Empty | Cons[Any] = Empty()
     println(list)
     println(emptyList)
 

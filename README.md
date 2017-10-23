@@ -27,7 +27,7 @@ You will need to make the following adjustments to your build:
 
 ### project/plugins.sbt
 ```scala
-addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.1.5")
+addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.1.6")
 ```
 
 ### project/build.properties

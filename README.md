@@ -27,7 +27,7 @@ You will need to make the following adjustments to your build:
 
 ### project/plugins.sbt
 ```scala
-addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.1.6")
+addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.1.7")
 ```
 
 ### project/build.properties
@@ -43,7 +43,7 @@ Any version number that starts with `0.` is automatically recognized as Dotty by
 the `sbt-dotty` plugin, you don't need to set up anything:
 
 ```scala
-scalaVersion := "0.4.0-RC1"
+scalaVersion := "0.5.0-RC1"
 ```
 
 #### Nightly builds

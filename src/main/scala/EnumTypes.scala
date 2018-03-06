@@ -4,18 +4,15 @@
 object EnumTypes {
 
   enum ListEnum[+A] {
-    case Cons[+A](h: A, t: ListEnum[A]) extends ListEnum[A]
-    case Empty extends ListEnum[Nothing]
+    case Cons(h: A, t: ListEnum[A])
+    case Empty
   }
 
-  // taken from: https://github.com/lampepfl/dotty/issues/1970
-  enum class Planet(mass: Double, radius: Double) {
+  enum Planet(mass: Double, radius: Double) {
     private final val G = 6.67300E-11
     def surfaceGravity = G * mass / (radius * radius)
     def surfaceWeight(otherMass: Double) =  otherMass * surfaceGravity
-  }
 
-  object Planet {
     case MERCURY extends Planet(3.303e+23, 2.4397e6)
     case VENUS   extends Planet(4.869e+24, 6.0518e6)
     case EARTH   extends Planet(5.976e+24, 6.37814e6)

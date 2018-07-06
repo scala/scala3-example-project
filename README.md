@@ -32,7 +32,7 @@ addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.2.2")
 
 ### project/build.properties
 ```scala
-sbt.version=1.1.4
+sbt.version=1.1.5
 ```
 
 Older versions of sbt are not supported.
@@ -43,7 +43,7 @@ Any version number that starts with `0.` is automatically recognized as Dotty by
 the `sbt-dotty` plugin, you don't need to set up anything:
 
 ```scala
-scalaVersion := "0.8.0-RC1"
+scalaVersion := "0.9.0-RC1"
 ```
 
 #### Nightly builds

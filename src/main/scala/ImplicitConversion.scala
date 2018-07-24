@@ -1,3 +1,4 @@
+import scala.language.implicitConversions
 
 /**
   * Implicit Conversions: http://dotty.epfl.ch/docs/reference/changed/implicit-conversions.html

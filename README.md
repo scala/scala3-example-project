@@ -86,9 +86,6 @@ This will have no effect when compiling with Scala 2.x, but when compiling
 with Dotty this will change the cross-version to a Scala 2.x one. This
 works because Dotty is currently retro-compatible with Scala 2.x.
 
-**NOTE**: Dotty's retro-compatibility with Scala 2.x will be dropped before
-Dotty is released, you should not rely on it.
-
 ## Discuss
 
 Feel free to come chat with us on the

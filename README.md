@@ -21,13 +21,13 @@ Any version number that starts with `0.` is automatically recognized as Dotty,
 you don't need to set up anything:
 
 ```scala
-def scalaVersion = "0.10.0-RC1"
+def scalaVersion = "0.12.0-RC1"
 ```
 
 #### Nightly builds
 If the latest release of Dotty is missing a bugfix or feature you need, you may
 wish to use a nightly build. Look at the bottom of
-https://repo1.maven.org/maven2/ch/epfl/lamp/dotty_0.11/ to find the version
+https://repo1.maven.org/maven2/ch/epfl/lamp/dotty_0.13/ to find the version
 number for the latest nightly build.
 
 ## Getting your project to compile with Dotty

@@ -82,6 +82,12 @@ by:
     libraryDependencies += ("a" %% "b" % "c").withDottyCompat(scalaVersion.value)
 ```
 
+Or you can alternatively use:
+
+```scala
+    libraryDependencies := libraryDependencies.value.map(_.withDottyCompat(scalaVersion.value))
+```
+
 This will have no effect when compiling with Scala 2.x, but when compiling
 with Dotty this will change the cross-version to a Scala 2.x one. This
 works because Dotty is currently retro-compatible with Scala 2.x.

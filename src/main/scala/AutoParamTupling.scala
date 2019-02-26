@@ -1,6 +1,6 @@
 
 /**
-  * Automatic Tupling of Function Params: http://dotty.epfl.ch/docs/reference/auto-parameter-tupling.html
+  * Automatic Tupling of Function Params: https://dotty.epfl.ch/docs/reference/other-new-features/auto-parameter-tupling.html
   */
 object AutoParamTupling {
 
@@ -8,7 +8,7 @@ object AutoParamTupling {
 
     /**
       * In order to get thread safety, you need to put @volatile before lazy vals.
-      * http://dotty.epfl.ch/docs/reference/changed/lazy-vals.html
+      * https://dotty.epfl.ch/docs/reference/changed-features/lazy-vals.html
       */
     @volatile lazy val xs: List[String] = List("d", "o", "t", "t", "y")
 

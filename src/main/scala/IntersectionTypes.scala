@@ -1,5 +1,5 @@
 /**
-  * Intersection Types: http://dotty.epfl.ch/docs/reference/intersection-types.html
+  * Intersection Types: https://dotty.epfl.ch/docs/reference/new-types/intersection-types.html
   */
 object IntersectionTypes {
 

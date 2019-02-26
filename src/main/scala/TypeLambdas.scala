@@ -1,5 +1,5 @@
 /**
-  * Type Lambdas: http://dotty.epfl.ch/docs/reference/type-lambdas.html
+  * Type Lambdas: https://dotty.epfl.ch/docs/reference/new-types/type-lambdas.html
   */
 object TypeLambdas {
 

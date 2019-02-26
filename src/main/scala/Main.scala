@@ -9,7 +9,7 @@ object Main {
 
     runExample("Context Queries")(ContextQueries.test)
 
-    runExample("Implicit Params")(ImplicitParams.test)
+    runExample("Implied Instances")(ImpliedInstances.test)
 
     runExample("Conversion")(Conversion.test)
 

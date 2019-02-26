@@ -21,10 +21,10 @@ object ContextQueries /* Formerly known as Implicit Function Types */ {
 
   object parse {
 
-    type Parseable[T] = given ImplicitParams.StringParser[T] => Try[T]
+    type Parseable[T] = given ImpliedInstances.StringParser[T] => Try[T]
 
     def sumStrings(x: String, y: String): Parseable[Int] = {
-      val parser = implicitly[ImplicitParams.StringParser[Int]]
+      val parser = implicitly[ImpliedInstances.StringParser[Int]]
       val tryA = parser.parse(x)
       val tryB = parser.parse(y)
 

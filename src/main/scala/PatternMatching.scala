@@ -1,6 +1,6 @@
 
 /**
-  * Pattern Matching: http://dotty.epfl.ch/docs/reference/changed/pattern-matching.html
+  * Pattern Matching: https://dotty.epfl.ch/docs/reference/changed-features/pattern-matching.html
   */
 object PatternMatching {
 

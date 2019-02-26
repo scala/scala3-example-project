@@ -1,24 +1,24 @@
 import scala.language.strictEquality
 
 /**
-  * Multiversal Equality: http://dotty.epfl.ch/docs/reference/multiversal-equality.html
-  * scala.Eq definition: https://github.com/lampepfl/dotty/blob/master/library/src/scala/Eq.scala
+  * Multiversal Equality: https://dotty.epfl.ch/docs/reference/contextual/multiversal-equality.html
+  * scala.Eq definition: https://github.com/lampepfl/dotty/blob/master/library/src/scala/Eql.scala
   */
 object MultiversalEquality {
 
   def test: Unit = {
 
     // Values of types Int and String cannot be compared with == or !=,
-    // unless we add a custom implicit like:
-    implicit def eqIntString: Eq[Int, String] = Eq
+    // unless we add the derived implied instance like:
+    implied for Eql[Int, String] = Eql.derived
     println(3 == "3")
 
     // By default, all numbers are comparable, because of;
-    // implicit def eqNumber : Eq[Number, Number] = Eq
+    // implicit def eqlNumber: Eql[Number, Number] = derived
     println(3 == 5.1)
 
     // By default, all Sequences are comparable, because of;
-    // implicit def eqSeq[T, U](implicit eq: Eq[T, U]): Eq[Seq[T], Seq[U]] = Eq
+    // implicit def eqlSeq[T, U](implicit eq: Eql[T, U]): Eql[GenSeq[T], GenSeq[U]] = derived
     println(List(1, 2) == Vector(1, 2))
 
     class A(a: Int)
@@ -27,10 +27,10 @@ object MultiversalEquality {
     val a = new A(4)
     val b = new B(4)
 
-    // scala.language.strictEquality is enabled, therefore we need some extra implicits
+    // scala.language.strictEquality is enabled, therefore we need some extra implied instances
     // to compare instances of A and B.
-    implicit def eqAB: Eq[A, B] = Eq
-    implicit def eqBA: Eq[B, A] = Eq
+    implied for Eql[A, B] = Eql.derived
+    implied for Eql[B, A] = Eql.derived
 
     println(a != b)
     println(b == a)

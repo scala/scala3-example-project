@@ -1,6 +1,6 @@
 
 /**
-  * Named Type Arguments: http://dotty.epfl.ch/docs/reference/named-typeargs.html
+  * Named Type Arguments: https://dotty.epfl.ch/docs/reference/other-new-features/named-typeargs.html
   */
 object NamedTypeArguments {
 

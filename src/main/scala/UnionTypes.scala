@@ -1,5 +1,5 @@
 /**
-  * Union Types: http://dotty.epfl.ch/docs/reference/union-types.html
+  * Union Types: https://dotty.epfl.ch/docs/reference/new-types/union-types.html
   */
 object UnionTypes {
 

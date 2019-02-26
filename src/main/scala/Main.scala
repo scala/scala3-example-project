@@ -7,11 +7,11 @@ object Main {
 
     runExample("Enum Types")(EnumTypes.test)
 
-    runExample("Implicit Functions")(ImplicitFunctions.test)
+    runExample("Context Queries")(ContextQueries.test)
 
-    runExample("Implicit Params")(ImplicitParams.test)
+    runExample("Implied Instances")(ImpliedInstances.test)
 
-    runExample("Implicit Conversion")(ImplicitConversion.test)
+    runExample("Conversion")(Conversion.test)
 
     runExample("Union Types")(UnionTypes.test)
 

@@ -1,8 +1,8 @@
 import scala.language.strictEquality
 
 /**
-  * Multiversal Equality: http://dotty.epfl.ch/docs/reference/multiversal-equality.html
-  * scala.Eq definition: https://github.com/lampepfl/dotty/blob/master/library/src/scala/Eq.scala
+  * Multiversal Equality: https://dotty.epfl.ch/docs/reference/contextual/multiversal-equality.html
+  * scala.Eq definition: https://github.com/lampepfl/dotty/blob/master/library/src/scala/Eql.scala
   */
 object MultiversalEquality {
 
@@ -10,7 +10,7 @@ object MultiversalEquality {
 
     // Values of types Int and String cannot be compared with == or !=,
     // unless we add a custom implicit like:
-    implicit def eqIntString: Eq[Int, String] = Eq
+    implicit def eqIntString: Eql[Int, String] = Eql.derived
     println(3 == "3")
 
     // By default, all numbers are comparable, because of;
@@ -29,8 +29,8 @@ object MultiversalEquality {
 
     // scala.language.strictEquality is enabled, therefore we need some extra implicits
     // to compare instances of A and B.
-    implicit def eqAB: Eq[A, B] = Eq
-    implicit def eqBA: Eq[B, A] = Eq
+    implicit def eqAB: Eql[A, B] = Eql.derived
+    implicit def eqBA: Eql[B, A] = Eql.derived
 
     println(a != b)
     println(b == a)

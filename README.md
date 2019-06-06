@@ -49,7 +49,7 @@ scalaVersion := "0.15.0-RC1"
 #### Nightly builds
 If the latest release of Dotty is missing a bugfix or feature you need, you may
 wish to use a nightly build. Look at the bottom of
-https://repo1.maven.org/maven2/ch/epfl/lamp/dotty_0.14/ to find the version
+https://repo1.maven.org/maven2/ch/epfl/lamp/dotty_0.15/ to find the version
 number for the latest nightly build. Alternatively, you can set `scalaVersion :=
 dottyLatestNightlyBuild.get` to always use the latest nightly build of dotty.
 

@@ -32,7 +32,7 @@ object EnumTypes {
 
     def calculateEarthWeightOnPlanets(earthWeight: Double) = {
       val mass = earthWeight/Planet.EARTH.surfaceGravity
-      for (p <- Planet.enumValues)
+      for (p <- Planet.values)
         println(s"Your weight on $p is ${p.surfaceWeight(mass)}")
     }
 

@@ -5,7 +5,7 @@ object TypeLambdas {
 
   type T[+X, Y] = Map[Y, X]
 
-  type Tuple = [X] => (X, X)
+  type Tuple = [X] =>> (X, X)
 
   def test: Unit = {
 

@@ -10,7 +10,7 @@ object Conversion {
 
   def convert[T, U](x: T) given (converter: Conversion[T, U]): U = converter(x)
 
-  implied IntWrapperToDoubleWrapper for Conversion[IntWrapper, DoubleWrapper] = new Conversion[IntWrapper, DoubleWrapper] {
+  delegate IntWrapperToDoubleWrapper for Conversion[IntWrapper, DoubleWrapper] = new Conversion[IntWrapper, DoubleWrapper] {
     override def apply(i: IntWrapper): DoubleWrapper = new DoubleWrapper(i.a.toDouble)
   }
 

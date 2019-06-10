@@ -9,8 +9,8 @@ object MultiversalEquality {
   def test: Unit = {
 
     // Values of types Int and String cannot be compared with == or !=,
-    // unless we add the derived implied instance like:
-    implied for Eql[Int, String] = Eql.derived
+    // unless we add the derived delegate instance like:
+    delegate for Eql[Int, String] = Eql.derived
     println(3 == "3")
 
     // By default, all numbers are comparable, because of;
@@ -27,10 +27,10 @@ object MultiversalEquality {
     val a = new A(4)
     val b = new B(4)
 
-    // scala.language.strictEquality is enabled, therefore we need some extra implied instances
+    // scala.language.strictEquality is enabled, therefore we need some extra delegate instances
     // to compare instances of A and B.
-    implied for Eql[A, B] = Eql.derived
-    implied for Eql[B, A] = Eql.derived
+    delegate for Eql[A, B] = Eql.derived
+    delegate for Eql[B, A] = Eql.derived
 
     println(a != b)
     println(b == a)

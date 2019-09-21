@@ -11,17 +11,17 @@ object ContextQueries /* Formerly known as Implicit Function Types */ {
 
   object context {
     // type alias Contextual
-    type Contextual[T] = given ExecutionContext => T
+    type Contextual[T] = (given ExecutionContext) => T
 
     // sum is expanded to sum(x, y)(ctx)
     def asyncSum(x: Int, y: Int): Contextual[Future[Int]] = Future(x + y)
 
-    def asyncMult(x: Int, y: Int) given (ctx: ExecutionContext) = Future(x * y)
+    def asyncMult(x: Int, y: Int)(given ctx: ExecutionContext) = Future(x * y)
   }
 
   object parse {
 
-    type Parseable[T] = given ImpliedInstances.StringParser[T] => Try[T]
+    type Parseable[T] = (given ImpliedInstances.StringParser[T]) => Try[T]
 
     def sumStrings(x: String, y: String): Parseable[Int] = {
       val parser = implicitly[ImpliedInstances.StringParser[Int]]

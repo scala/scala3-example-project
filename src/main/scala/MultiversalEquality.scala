@@ -4,7 +4,7 @@ import scala.language.strictEquality
   * Multiversal Equality: https://dotty.epfl.ch/docs/reference/contextual/multiversal-equality.html
   * scala.Eq definition: https://github.com/lampepfl/dotty/blob/master/library/src/scala/Eql.scala
   */
-object MultiversalEquality extends App {
+  object MultiversalEquality extends App {
 
   def test(): Unit = {
 

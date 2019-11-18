@@ -20,7 +20,7 @@ import scala.language.strictEquality
     // By default, all Sequences are comparable, because of;
     // implicit def eqlSeq[T, U](implicit eq: Eql[T, U]): Eql[GenSeq[T], GenSeq[U]] = derived
     // This fails, why?
-    println("List(1, 2) == Vector(1, 2)): " + List(1, 2) == Vector(1, 2))
+    println("List(1, 2) == Vector(1, 2)): " + (List(1, 2) == Vector(1, 2)))
 
     class A(a: Int)
     class B(b: Int)
@@ -29,7 +29,7 @@ import scala.language.strictEquality
     val b = new B(4)
 
     // Two arrays in Scala 2 do not compare equal so why should this work?
-    println("Array(1, 2) == Array(1, 2): " + Array(1, 2) == Array(1, 2))
+    //println("Array(1, 2) == Array(1, 2): " + (Array(1, 2) == Array(1, 2)))
 
     // scala.language.strictEquality is enabled, therefore we need some extra delegate instances
     // to compare instances of A and B.

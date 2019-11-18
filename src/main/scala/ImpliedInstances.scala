@@ -1,9 +1,7 @@
 import scala.util.{Success, Try}
 
-/**
-  * Implied Instances:
-  * - https://dotty.epfl.ch/docs/reference/contextual/instance-defs.html
-  */
+/** Implied Instances:
+  * - https://dotty.epfl.ch/docs/reference/contextual/instance-defs.html */
 object ImpliedInstances extends App {
   sealed trait StringParser[A] {
     def parse(s: String): Try[A]
@@ -24,15 +22,16 @@ object ImpliedInstances extends App {
       new StringParser[Option[A]] {
         override def parse(s: String): Try[Option[A]] = s match {
           case "" ⇒ Success(None) // implicit parser not used.
-          case str ⇒ parser.parse(str).map(x ⇒ Some(x)) // implicit parser is evaluated at here
+          case str ⇒ parser.parse(str).map(Some(_)) // implicit parser is evaluated here
         }
       }
   }
 
   def test: Unit = {
-    println(implicitly[StringParser[Option[Int]]].parse("21"))
-    println(implicitly[StringParser[Option[Int]]].parse(""))
-    println(implicitly[StringParser[Option[Int]]].parse("21a"))
-    println(implicitly[StringParser[Option[Int]]](StringParser.optionParser[Int]).parse("42"))
+    val spoi = implicitly[StringParser[Option[Int]]]
+    println(spoi.parse("21"))
+    println(spoi.parse(""))
+    println(spoi.parse("21a"))
+    println(StringParser.optionParser[Int].parse("42"))
   }
 }

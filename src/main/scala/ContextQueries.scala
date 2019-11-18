@@ -2,12 +2,10 @@
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.Try
 
-/**
-  * Context Queries:
+/** Context Queries (Formerly known as Implicit Function Types):
   * - http://dotty.epfl.ch/docs/reference/contextual/query-types.html,
-  * - https://www.scala-lang.org/blog/2016/12/07/implicit-function-types.html
-  */
-object ContextQueries extends App /* Formerly known as Implicit Function Types */ {
+  * - https://www.scala-lang.org/blog/2016/12/07/implicit-function-types.html */
+object ContextQueries extends App {
   object context {
     // type alias Contextual
     type Contextual[T] = (given ExecutionContext) => T
@@ -15,7 +13,8 @@ object ContextQueries extends App /* Formerly known as Implicit Function Types *
     // sum is expanded to sum(x, y)(ctx)
     def asyncSum(x: Int, y: Int): Contextual[Future[Int]] = Future(x + y)
 
-    def asyncMult(x: Int, y: Int)(given ctx: ExecutionContext) = Future(x * y)
+    def asyncMult(x: Int, y: Int)
+                 (given ctx: ExecutionContext) = Future(x * y)
   }
 
   object parse {

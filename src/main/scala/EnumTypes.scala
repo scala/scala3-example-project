@@ -1,6 +1,4 @@
-/**
-  * Enum Types: http://dotty.epfl.ch/docs/reference/enums/adts.html
-  */
+/** Enum Types: http://dotty.epfl.ch/docs/reference/enums/adts.html */
 object EnumTypes extends App {
   enum ListEnum[+A] {
     case Cons(h: A, t: ListEnum[A])

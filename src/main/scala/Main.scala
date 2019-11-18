@@ -1,4 +1,3 @@
-
 object Main {
   def main(args: Array[String]): Unit = {
     runExample("Trait Params")(TraitParams.test)

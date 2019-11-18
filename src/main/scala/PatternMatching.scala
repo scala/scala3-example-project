@@ -1,7 +1,4 @@
-
-/**
-  * Pattern Matching: https://dotty.epfl.ch/docs/reference/changed-features/pattern-matching.html
-  */
+/** Pattern Matching: https://dotty.epfl.ch/docs/reference/changed-features/pattern-matching.html */
 object PatternMatching extends App {
   object booleanPattern {
     object Even {
@@ -48,7 +45,6 @@ object PatternMatching extends App {
     object Name {
       def unapply(s: String): Name = new Name(s)
     }
-
   }
 
   def test: Unit = {

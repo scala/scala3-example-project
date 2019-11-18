@@ -1,8 +1,7 @@
 /**
   * Union Types: https://dotty.epfl.ch/docs/reference/new-types/union-types.html
   */
-object UnionTypes {
-
+object UnionTypes extends App {
   sealed trait Division
   final case class DivisionByZero(msg: String) extends Division
   final case class Success(double: Double) extends Division
@@ -24,7 +23,6 @@ object UnionTypes {
   }
 
   def test: Unit = {
-
     val divisionResultSuccess: DivisionResult = safeDivide(4, 2)
 
     // commutative
@@ -40,6 +38,5 @@ object UnionTypes {
     val emptyList: Empty | Cons[Any] = Empty()
     println(list)
     println(emptyList)
-
   }
 }

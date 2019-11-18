@@ -1,7 +1,7 @@
 /**
   * Trait Parameters: https://dotty.epfl.ch/docs/reference/other-new-features/trait-parameters.html
   */
-object TraitParams {
+object TraitParams extends App {
 
   trait Base(val msg: String)
   class A extends Base("Hello")
@@ -11,7 +11,6 @@ object TraitParams {
   private def printMessages(msgs: (A | B)*) = println(msgs.map(_.msg).mkString(" "))
 
   def test: Unit = {
-
     printMessages(new A, new B)
 
     // Sanity check the classpath: this won't run if the dotty jar is not present.

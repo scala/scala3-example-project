@@ -3,8 +3,7 @@ import scala.language.implicitConversions
 /**
   *  Conversions: http://dotty.epfl.ch/docs/reference/contextual/conversions.html
   */
-object Conversion {
-
+object Conversion extends App {
   case class IntWrapper(a: Int) extends AnyVal
   case class DoubleWrapper(b: Double) extends AnyVal
 
@@ -31,7 +30,4 @@ object Conversion {
     println(useConversion)
     println(convert(new IntWrapper(42)))
   }
-
-
-
 }

@@ -7,8 +7,7 @@ import scala.util.Try
   * - http://dotty.epfl.ch/docs/reference/contextual/query-types.html,
   * - https://www.scala-lang.org/blog/2016/12/07/implicit-function-types.html
   */
-object ContextQueries /* Formerly known as Implicit Function Types */ {
-
+object ContextQueries extends App /* Formerly known as Implicit Function Types */ {
   object context {
     // type alias Contextual
     type Contextual[T] = (given ExecutionContext) => T
@@ -20,7 +19,6 @@ object ContextQueries /* Formerly known as Implicit Function Types */ {
   }
 
   object parse {
-
     type Parseable[T] = (given ImpliedInstances.StringParser[T]) => Try[T]
 
     def sumStrings(x: String, y: String): Parseable[Int] = {
@@ -36,13 +34,12 @@ object ContextQueries /* Formerly known as Implicit Function Types */ {
   }
 
   def test: Unit = {
-
     import ExecutionContext.Implicits.global
+
     context.asyncSum(3, 4).foreach(println)
     context.asyncMult(3, 4).foreach(println)
 
     println(parse.sumStrings("3", "4"))
     println(parse.sumStrings("3", "a"))
   }
-
 }

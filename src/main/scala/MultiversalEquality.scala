@@ -6,7 +6,7 @@ import scala.language.strictEquality
   */
   object MultiversalEquality extends App {
 
-  def test(): Unit = {
+  def test: Unit = {
 
     // Values of types Int and String cannot be compared with == or !=,
     // unless we add the derived delegate instance like:

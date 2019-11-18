@@ -1,6 +1,4 @@
-/**
-  * Type Lambdas: https://dotty.epfl.ch/docs/reference/new-types/type-lambdas.html
-  */
+/** Type Lambdas: https://dotty.epfl.ch/docs/reference/new-types/type-lambdas.html */
 object TypeLambdas extends App {
   type T[+X, Y] = Map[Y, X]
 

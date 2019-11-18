@@ -1,8 +1,5 @@
-/**
-  * Trait Parameters: https://dotty.epfl.ch/docs/reference/other-new-features/trait-parameters.html
-  */
+/** Trait Parameters: https://dotty.epfl.ch/docs/reference/other-new-features/trait-parameters.html */
 object TraitParams extends App {
-
   trait Base(val msg: String)
   class A extends Base("Hello")
   class B extends Base("Dotty!")
@@ -14,7 +11,9 @@ object TraitParams extends App {
     printMessages(new A, new B)
 
     // Sanity check the classpath: this won't run if the dotty jar is not present.
-    val x: Int => Int = z => z
+    val x: Int => Int =
+      z => z
+
     x(1)
   }
 }

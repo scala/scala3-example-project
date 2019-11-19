@@ -7,6 +7,14 @@
 This is a normal sbt project, you can compile code with `sbt compile` and run it
 with `sbt run`, `sbt console` will start a Dotty REPL.
 
+You can run just one example from the `sbt console`, for example we can run `Typeclasses.test`:
+
+```
+$ sbt console
+scala> Typeclasses.test
+sum("a", "b", "c"): abc
+```
+
 If compiling this example project fails, you probably have a global sbt plugin
 that does not work with dotty, try to disable all plugins in
 `~/.sbt/1.0/plugins` and `~/.sbt/1.0`.

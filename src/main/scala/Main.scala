@@ -16,7 +16,8 @@ object Main {
     runExample("Pattern Matching")(PatternMatching.test)
   }
 
-  private def runExample(name: String)(f: => Unit) = {
+  private def runExample(name: String)
+                        (f: => Unit) = {
     println(Console.MAGENTA + s"$name example:" + Console.RESET)
     f
     println()

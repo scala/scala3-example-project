@@ -1,5 +1,6 @@
 object Main {
   def main(args: Array[String]): Unit = {
+    runExample("Typeclasses")(Typeclasses.test)
     runExample("Trait Params")(TraitParams.test)
     runExample("Enum Types")(EnumTypes.test)
     runExample("Context Queries")(ContextQueries.test)

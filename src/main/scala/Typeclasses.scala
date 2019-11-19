@@ -16,7 +16,6 @@ object Typeclasses extends App {
     xs.foldLeft(summon[Monoid[T]].unit)(_.combine(_))
 
   def test: Unit = {
-    println("\n\nasdf\nasdf\n\n")
     println("""sum("a", "b", "c"): """ + sum(List("a", "b", "c")))
   }
 }

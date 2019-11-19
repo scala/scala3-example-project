@@ -1,6 +1,3 @@
-/**
-  * Automatic Tupling of Function Params: https://dotty.epfl.ch/docs/reference/other-new-features/auto-parameter-tupling.html
-  */
 object Typeclasses extends App {
   trait SemiGroup[T] {
     def (x: T) combine (y: T): T

@@ -40,10 +40,10 @@ addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.3.4")
 
 ### project/build.properties
 ```scala
-sbt.version=1.3.3
+sbt.version=1.3.4
 ```
 
-Older versions of sbt are not supported.
+Versions of sbt older than 1.3.3 are not supported.
 
 
 ### build.sbt

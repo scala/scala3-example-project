@@ -5,7 +5,7 @@ object TraitParams extends App {
   class B extends Base("Dotty!")
 
   // Union types only exist in Dotty, so there's no chance that this will accidentally be compiled with Scala 2
-  private def printMessages(msgs: (A | B)*) = println(msgs.map(_.msg).mkString(" "))
+  private def printMessages(msgs: (A | B)*): Unit = println(msgs.map(_.msg).mkString(" "))
 
   def test: Unit = {
     printMessages(new A, new B)

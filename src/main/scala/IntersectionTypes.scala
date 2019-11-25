@@ -1,7 +1,7 @@
 /**
   * Intersection Types: https://dotty.epfl.ch/docs/reference/new-types/intersection-types.html
   */
-object IntersectionTypes {
+object IntersectionTypes extends App {
   sealed trait X {
     def x: Double
     def tpe: X

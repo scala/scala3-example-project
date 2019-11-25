@@ -1,4 +1,4 @@
-object Typeclasses {
+object Typeclasses extends App {
   trait SemiGroup[T] with
     def (x: T) combine (y: T): T
 

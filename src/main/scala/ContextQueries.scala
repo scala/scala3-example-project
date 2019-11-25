@@ -41,4 +41,5 @@ object ContextQueries extends App {
     println(parse.sumStrings("3", "4"))
     println(parse.sumStrings("3", "a"))
   }
+  test
 }

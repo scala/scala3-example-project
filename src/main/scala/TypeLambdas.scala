@@ -11,4 +11,6 @@ object TypeLambdas extends App {
     val tuple: Tuple[String] = ("a", "b")
     println(tuple)
   }
+
+  test
 }

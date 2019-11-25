@@ -87,4 +87,6 @@ object PatternMatching extends App {
       case _ => println("empty name")
     }
   }
+
+  test
 }

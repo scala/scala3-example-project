@@ -29,4 +29,6 @@ object IntersectionTypes extends App {
     val p2: PP = Point(6, 8)
     println(euclideanDistance(p1, p2))
   }
+
+  test
 }

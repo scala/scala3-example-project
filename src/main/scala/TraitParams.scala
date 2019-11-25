@@ -16,4 +16,6 @@ object TraitParams extends App {
 
     x(1)
   }
+
+  test
 }

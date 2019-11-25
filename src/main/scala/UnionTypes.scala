@@ -37,4 +37,6 @@ object UnionTypes extends App {
     println(list)
     println(emptyList)
   }
+
+  test
 }

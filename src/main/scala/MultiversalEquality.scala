@@ -38,4 +38,6 @@ import scala.language.strictEquality
     println("a != b: " + (a != b))
     println("b == a: " + (b == a))
   }
+
+  test
 }

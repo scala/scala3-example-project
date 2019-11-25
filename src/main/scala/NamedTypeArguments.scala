@@ -25,4 +25,6 @@ object NamedTypeArguments extends App {
 
     println(compile)
   }
+
+  test
 }

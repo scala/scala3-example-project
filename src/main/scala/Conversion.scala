@@ -30,4 +30,6 @@ object Conversion extends App {
     println(useConversion)
     println(convert(new IntWrapper(42)))
   }
+
+  test
 }

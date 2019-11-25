@@ -37,4 +37,6 @@ object EnumTypes extends App {
 
     calculateEarthWeightOnPlanets(80)
   }
+  
+  test
 }

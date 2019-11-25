@@ -20,4 +20,6 @@ object StructuralTypes extends App {
     // age field is java.util.NoSuchElementException: None.get
     //println(invalidPerson.age)
   }
+
+  test
 }

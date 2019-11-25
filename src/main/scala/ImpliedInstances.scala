@@ -34,4 +34,6 @@ object ImpliedInstances extends App {
     println(spoi.parse("21a"))
     println(StringParser.optionParser[Int].parse("42"))
   }
+
+  test
 }

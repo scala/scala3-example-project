@@ -27,7 +27,7 @@ that does not work with dotty; disable all plugins in
 http://dotty.epfl.ch/docs/usage/ide-support.html
 
 Meh, not so much.
-I found Atom with sbt running in a shell under platformio terminal worked best.
+I found Atom with sbt running in a shell under `platformio-ide-terminal` worked best.
 
 ## Making a New Dotty Project
 > The fastest way to start a new Dotty project is to use one of the following templates:
@@ -111,5 +111,4 @@ Alternatively, to set this setting on all your dependencies, you can use:
 ```
 
 ## Discuss
-Feel free to come chat on the
-[Dotty gitter](http://gitter.im/lampepfl/dotty)!
+Chat on the [Dotty gitter](http://gitter.im/lampepfl/dotty) channel.

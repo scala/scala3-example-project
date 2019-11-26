@@ -1,20 +1,20 @@
 /** Trait Parameters: https://dotty.epfl.ch/docs/reference/other-new-features/trait-parameters.html */
 object TraitParams extends App {
   trait Base(val msg: String)
+  
   class A extends Base("Hello")
-  class B extends Base("Dotty!")
+  class B extends Base("Dotty")
 
-  // Union types only exist in Dotty, so there's no chance that this will accidentally be compiled with Scala 2
-  private def printMessages(msgs: (A | B)*): Unit = println(msgs.map(_.msg).mkString(" "))
+  case class C(override val msg: String) extends Base(msg)
+  case class D(override val msg: String) extends Base(msg)
+
+  /** @param msgs varargs union type (sequence of A or B) */
+  private def printMessages1(msgs: (A | B)*): Unit = println(msgs.map(_.msg).mkString(" ") + "!")
+  private def printMessages2(msgs: (C | D)*): Unit = println(msgs.map(_.msg).mkString(" ") + "!")
 
   def test: Unit = {
-    printMessages(new A, new B)
-
-    // Sanity check the classpath: this won't run if the dotty jar is not present.
-    val x: Int => Int =
-      z => z
-
-    x(1)
+    printMessages1(new A, new B)
+    printMessages2(C("Goodbye"), D("cruel world"))
   }
 
   test

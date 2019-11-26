@@ -11,9 +11,8 @@ object UnionTypes extends App {
   final class Empty extends List[Nothing]
   final case class Cons[+A](h: A, t: List[A]) extends List[A]
 
-  private def safeDivide(a: Double, b: Double): DivisionResult = {
+  private def safeDivide(a: Double, b: Double): DivisionResult =
     if (b == 0) DivisionByZero("DivisionByZeroException") else Success(a / b)
-  }
 
   private def either(division: Division) = division match {
     case DivisionByZero(m) => Left(m)

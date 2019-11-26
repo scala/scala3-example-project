@@ -4,10 +4,12 @@ I (Mike Slinn) fixed many significant bugs in the [upstream project](https://git
 
 ## Usage
 
-This is a normal sbt project, you can compile code with `sbt compile` and run it
-with `sbt run`, `sbt console` will start a Dotty REPL.
+This is a normal sbt project.
+You can compile code with `sbt compile` and run it
+with `sbt run` or `sbt runMain <entryPoint>`.
+`sbt console` will start a Dotty REPL.
 
-You can run just one example from the `sbt console`, for example we can run `Typeclasses.test`:
+You can also execute just one example from the `sbt console` by evaluating the `test` method, for example we can run `Typeclasses.test`:
 
 ```
 $ sbt console
@@ -16,8 +18,8 @@ sum("a", "b", "c"): abc
 ```
 
 If compiling this example project fails, you probably have a global sbt plugin
-that does not work with dotty, try to disable all plugins in
-`~/.sbt/1.0/plugins` and `~/.sbt/1.0`.
+that does not work with dotty; disable all plugins in
+`~/.sbt/1.0/plugins` and `~/.sbt/1.0` by renaming those directories to something else.
 
 ### IDE Support
 

@@ -34,6 +34,7 @@ object OpaqueTypes2 extends App {
   object Access {
     opaque type Permissions = Int
     opaque type PermissionChoice = Int
+    
     /** `Permission`'s upper bound is `Permissions & PermissionChoice`.
       * Thus `Permission` is universally known to be a subtype of `Permissions` and `PermissionChoice`. */
     opaque type Permission <: Permissions & PermissionChoice = Int

@@ -68,8 +68,7 @@ https://repo1.maven.org/maven2/ch/epfl/lamp/dotty_0.18/ to find the version
 number for the latest nightly build. Alternatively, you can set `scalaVersion :=
 dottyLatestNightlyBuild.get` to always use the latest nightly build of dotty.
 
-## Getting your project to compile with Dotty
-
+## Compiling Your Project with Dotty
 When porting an existing project, it's a good idea to start out with the Scala 2
 compatibility mode (note that this mode affects typechecking and thus may
 prevent some valid Dotty code from compiling) by adding to your `build.sbt`:

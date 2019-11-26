@@ -1,4 +1,4 @@
-# Example sbt project that compiles using Dotty
+# Example sbt Project that Compiles Using Dotty
 
 I (Mike Slinn) fixed many significant bugs in the [upstream project](https://github.com/lampepfl/dotty-example-project) and added code examples for new major features that were missing.
 
@@ -51,7 +51,7 @@ sbt.version=1.2.8
 ```
 
 Versions of sbt older than 1.2.8 are not supported.
-Versions 1.3.2 and 1.3.3 do not work properly with Dotty.
+Versions 1.3.3 and 1.3.4 do not work properly with Dotty.
 
 ### build.sbt
 Any version number that starts with `0.` is automatically recognized as Dotty by

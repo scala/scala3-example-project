@@ -1,6 +1,6 @@
 import scala.util.{Success, Try}
 
-/** Delegates (Implied Instances):
+/** Delegates (formerly known as Implied Instances):
   * - https://dotty.epfl.ch/docs/reference/contextual/delegates.html*/
 object Delegates extends App {
   sealed trait StringParser[A] {

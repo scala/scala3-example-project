@@ -20,10 +20,10 @@ object ContextQueries1 extends App {
   }
 
   object parse {
-    type Parseable[T] = (given ImpliedInstances.StringParser[T]) => Try[T]
+    type Parseable[T] = (given Delegates.StringParser[T]) => Try[T]
 
     def sumStrings(x: String, y: String): Parseable[Int] = {
-      val parser = implicitly[ImpliedInstances.StringParser[Int]]
+      val parser = implicitly[Delegates.StringParser[Int]]
       val tryA = parser.parse(x)
       val tryB = parser.parse(y)
 

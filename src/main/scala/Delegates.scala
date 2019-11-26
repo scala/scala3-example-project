@@ -1,8 +1,8 @@
 import scala.util.{Success, Try}
 
-/** Implied Instances:
-  * - https://dotty.epfl.ch/docs/reference/contextual/instance-defs.html */
-object ImpliedInstances extends App {
+/** Delegates (Implied Instances):
+  * - https://dotty.epfl.ch/docs/reference/contextual/delegates.html*/
+object Delegates extends App {
   sealed trait StringParser[A] {
     def parse(s: String): Try[A]
   }

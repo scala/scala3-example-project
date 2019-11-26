@@ -20,6 +20,8 @@ object PostConditions {
 object ContextQueries2 extends App {
   import PostConditions.{ensuring, result}
 
-  val s = List(1, 2, 3).sum.ensuring(result == 6)
-  println("Yes, the list sums to 6.")
+  def test: Unit = {
+    val s = List(1, 2, 3).sum.ensuring(result == 6)
+    println("Yes, the list sums to 6.")
+  }
 }

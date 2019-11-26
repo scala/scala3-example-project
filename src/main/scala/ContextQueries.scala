@@ -5,7 +5,7 @@ import scala.util.Try
 /** Context Queries (Formerly known as Implicit Function Types):
   * - http://dotty.epfl.ch/docs/reference/contextual/implicit-function-types.html,
   * - https://www.scala-lang.org/blog/2016/12/07/implicit-function-types.html */
-object ContextQueries extends App {
+object ContextQueries1 extends App {
   object context {
     // type alias Contextual
     type Contextual[T] = (given ExecutionContext) => T

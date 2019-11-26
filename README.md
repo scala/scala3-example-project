@@ -21,7 +21,7 @@ If compiling this example project fails, you probably have a global sbt plugin
 that does not work with dotty; disable all plugins in
 `~/.sbt/1.0/plugins` and `~/.sbt/1.0` by renaming those directories to something else.
 
-### IDE Support
+## IDE Support
 
 > Dotty comes built-in with IDE support, to try it out see
 http://dotty.epfl.ch/docs/usage/ide-support.html
@@ -63,7 +63,7 @@ the `sbt-dotty` plugin, you don't need to set up anything:
 scalaVersion := "0.20.0-RC1"
 ```
 
-#### Nightly Builds
+### Nightly Builds
 If the latest release of Dotty is missing a bugfix or feature you need, you may
 wish to use a nightly build. Look at the bottom of
 https://repo1.maven.org/maven2/ch/epfl/lamp/dotty_0.18/ to find the version
@@ -111,6 +111,5 @@ Alternatively, to set this setting on all your dependencies, you can use:
 ```
 
 ## Discuss
-
-Feel free to come chat with us on the
+Feel free to come chat on the
 [Dotty gitter](http://gitter.im/lampepfl/dotty)!

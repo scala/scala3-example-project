@@ -8,6 +8,7 @@ object EnumTypes extends App {
     case Empty
   }
 
+  /** This looks a lot like the [old Java enum example](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html) */
   enum Planet(mass: Double, radius: Double) {
     private final val G = 6.67300E-11
 

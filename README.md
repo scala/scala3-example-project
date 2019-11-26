@@ -19,7 +19,7 @@ If compiling this example project fails, you probably have a global sbt plugin
 that does not work with dotty, try to disable all plugins in
 `~/.sbt/1.0/plugins` and `~/.sbt/1.0`.
 
-### IDE support
+### IDE Support
 
 > Dotty comes built-in with IDE support, to try it out see
 http://dotty.epfl.ch/docs/usage/ide-support.html
@@ -27,7 +27,7 @@ http://dotty.epfl.ch/docs/usage/ide-support.html
 Meh, not so much.
 I found Atom with sbt running in a shell under platformio terminal worked best.
 
-## Making a new Dotty project
+## Making a New Dotty Project
 > The fastest way to start a new Dotty project is to use one of the following templates:
 > * [Simple Dotty project](https://github.com/lampepfl/dotty.g8)
 > * [Dotty project that cross-compiles with Scala 2](https://github.com/lampepfl/dotty-cross.g8)
@@ -36,7 +36,7 @@ I am not a fan of `giter8`.
 There is no reason to introduce yet another obscure language.
 [Try dottyTemplate](https://github.com/mslinn/dottyTemplate) instead.
 
-## Using Dotty in an existing project
+## Using Dotty in An Existing Project
 
 You will need to make the following adjustments to your build:
 
@@ -45,7 +45,7 @@ You will need to make the following adjustments to your build:
 addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.3.4")
 ```
 
-### project/build.properties
+### `project/build.properties`
 ```scala
 sbt.version=1.2.8
 ```
@@ -53,7 +53,7 @@ sbt.version=1.2.8
 Versions of sbt older than 1.2.8 are not supported.
 Versions 1.3.3 and 1.3.4 do not work properly with Dotty.
 
-### build.sbt
+### `build.sbt`
 Any version number that starts with `0.` is automatically recognized as Dotty by
 the `sbt-dotty` plugin, you don't need to set up anything:
 
@@ -61,7 +61,7 @@ the `sbt-dotty` plugin, you don't need to set up anything:
 scalaVersion := "0.20.0-RC1"
 ```
 
-#### Nightly builds
+#### Nightly Builds
 If the latest release of Dotty is missing a bugfix or feature you need, you may
 wish to use a nightly build. Look at the bottom of
 https://repo1.maven.org/maven2/ch/epfl/lamp/dotty_0.18/ to find the version

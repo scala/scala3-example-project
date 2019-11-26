@@ -1,4 +1,9 @@
-/** Union types (aka sum types): https://dotty.epfl.ch/docs/reference/new-types/union-types.html */
+/** Union types (aka sum types):
+  * * Like C structs
+  * * No boxing/unboxing overhead
+  * * Works with singleton types
+  * * Good for Scala/JavaScript interoperability
+  * https://dotty.epfl.ch/docs/reference/new-types/union-types.html */
 object UnionTypes extends App {
   sealed trait Division
   final case class DivisionByZero(msg: String) extends Division

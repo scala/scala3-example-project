@@ -1,4 +1,5 @@
-/** See https://dotty.epfl.ch/docs/reference/contextual/extension-methods-new.html */
+/** Easy way to add methods to existing classes
+  * See https://dotty.epfl.ch/docs/reference/contextual/extension-methods-new.html */
 object ExtensionClasses1 extends App {
   case class Circle(x: Double, y: Double, radius: Double)
 

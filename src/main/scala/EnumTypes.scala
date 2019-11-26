@@ -1,4 +1,7 @@
-/** Enum Types: http://dotty.epfl.ch/docs/reference/enums/adts.html */
+/** Proper Scala enums (Scala 2 Enumerations are horrible).
+  * * Interoperate with Java enums
+  * * Support Algebraic Data Types (ADTs) because they accept type parameters, and can be Generalized ADTs (GADTs).
+  * See http://dotty.epfl.ch/docs/reference/enums/adts.html */
 object EnumTypes extends App {
   enum ListEnum[+A] {
     case Cons(h: A, t: ListEnum[A])
@@ -37,6 +40,6 @@ object EnumTypes extends App {
 
     calculateEarthWeightOnPlanets(80)
   }
-  
+
   test
 }

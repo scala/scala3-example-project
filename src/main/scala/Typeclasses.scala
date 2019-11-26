@@ -1,3 +1,9 @@
+/** Extension methods provide a nice syntax for typeclasses
+  * * Removes need for dangerous implicit conversions
+  * * Emphasize intent over mechanism
+  * * Better error messages than generated from implicits
+  * * Implicit conversions will go away
+  * See https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates */
 object Typeclasses extends App {
   trait SemiGroup[T] with
     def (x: T) combine (y: T): T

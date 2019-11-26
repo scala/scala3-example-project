@@ -1,6 +1,6 @@
 # Example sbt project that compiles using Dotty
 
-[![Build Status](https://travis-ci.org/lampepfl/dotty-example-project.svg?branch=master)](https://travis-ci.org/lampepfl/dotty-example-project)
+I (Mike Slinn) fixed many significant bugs in the [upstream project](https://github.com/lampepfl/dotty-example-project) and added code examples for new major features that were missing.
 
 ## Usage
 
@@ -21,13 +21,20 @@ that does not work with dotty, try to disable all plugins in
 
 ### IDE support
 
-Dotty comes built-in with IDE support, to try it out see
+> Dotty comes built-in with IDE support, to try it out see
 http://dotty.epfl.ch/docs/usage/ide-support.html
 
+Meh, not so much.
+I found Atom with sbt running in a shell under platformio terminal worked best.
+
 ## Making a new Dotty project
-The fastest way to start a new Dotty project is to use one of the following templates:
-* [Simple Dotty project](https://github.com/lampepfl/dotty.g8)
-* [Dotty project that cross-compiles with Scala 2](https://github.com/lampepfl/dotty-cross.g8)
+> The fastest way to start a new Dotty project is to use one of the following templates:
+> * [Simple Dotty project](https://github.com/lampepfl/dotty.g8)
+> * [Dotty project that cross-compiles with Scala 2](https://github.com/lampepfl/dotty-cross.g8)
+
+I am not a fan of `giter8`.
+There is no reason to introduce yet another obscure language.
+[Try dottyTemplate](https://github.com/mslinn/dottyTemplate) instead.
 
 ## Using Dotty in an existing project
 
@@ -40,11 +47,11 @@ addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.3.4")
 
 ### project/build.properties
 ```scala
-sbt.version=1.3.4
+sbt.version=1.2.8
 ```
 
-Versions of sbt older than 1.3.3 are not supported.
-
+Versions of sbt older than 1.2.8 are not supported.
+Versions 1.3.2 and 1.3.3 do not work properly with Dotty.
 
 ### build.sbt
 Any version number that starts with `0.` is automatically recognized as Dotty by
@@ -74,8 +81,10 @@ scalacOptions ++= { if (isDotty.value) Seq("-language:Scala2") else Nil }
 Using the `isDotty` setting ensures that this option will only be set when
 compiling with Dotty.
 
-A tool to port code from Scala 2.x to Dotty is currently in development at
+> A tool to port code from Scala 2.x to Dotty is currently in development at
 https://github.com/scalacenter/scalafix
+
+Actually, the truth is `scalafix` has not had any work done on it in a long time, and there is no indication when this important project will get the attention it deserves. I'm concerned that history will repeat itself and we'll get a last-minute hack job.
 
 If your build contains dependencies that have only been published for Scala 2.x,
 you may be able to get them to work on Dotty by replacing:

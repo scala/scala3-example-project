@@ -6,6 +6,8 @@ object Main {
     runExample("Context Queries")(ContextQueries.test)
     runExample("Implied Instances")(ImpliedInstances.test)
     runExample("Conversion")(Conversion.test)
+    runExample("OpaqueTypes 1")(OpaqueTypes1.test)
+    runExample("OpaqueTypes 2")(OpaqueTypes2.test)
     runExample("Union Types")(UnionTypes.test)
     runExample("Intersection Types")(IntersectionTypes.test)
     runExample("Type Lambda")(TypeLambdas.test)

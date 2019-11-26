@@ -2,7 +2,7 @@
 object ExtensionClasses1 extends App {
   case class Circle(x: Double, y: Double, radius: Double)
 
-  // New Scala 3 way:
+  // New Scala 3 way, using an extension method:
   def (c: Circle) circumference: Double = c.radius * math.Pi * 2
 
   val circle = Circle(0, 0, 0.5)
@@ -10,7 +10,7 @@ object ExtensionClasses1 extends App {
 
   assert(circle.circumference == circumference(circle))
 
-  // Scala 2 way
+  // Old Scala 2 way, using an implicit class:
   //implicit class CircleOps(circle: Circle) extends AnyVal {
   //  def circumference = circle.radius * Pi * 2
   //}

@@ -3,7 +3,7 @@ import scala.concurrent.{ExecutionContext, Future}
 import scala.util.Try
 
 /** Context Queries (Formerly known as Implicit Function Types):
-  * - http://dotty.epfl.ch/docs/reference/contextual/query-types.html,
+  * - http://dotty.epfl.ch/docs/reference/contextual/implicit-function-types.html,
   * - https://www.scala-lang.org/blog/2016/12/07/implicit-function-types.html */
 object ContextQueries extends App {
   object context {
@@ -41,5 +41,6 @@ object ContextQueries extends App {
     println(parse.sumStrings("3", "4"))
     println(parse.sumStrings("3", "a"))
   }
+
   test
 }

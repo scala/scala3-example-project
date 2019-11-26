@@ -46,7 +46,7 @@ object OpaqueTypes2 extends App {
     val NoPermission: Permission = 0
     val ReadOnly: Permission = 1
     val WriteOnly: Permission = 2
-    val ReadWrite: Permissions = ReadOnly & WriteOnly
+    val ReadWrite: Permissions = ReadOnly | WriteOnly
     val ReadOrWrite: PermissionChoice = ReadOnly | WriteOnly
   }
 
@@ -56,8 +56,8 @@ object OpaqueTypes2 extends App {
     case class Item(rights: Permissions)
 
     val x = Item(ReadOnly)
-    assert( x.rights.is(ReadWrite) )
-    assert( x.rights.isOneOf(ReadOrWrite) == true )
+    assert( ! x.rights.is(ReadWrite) )
+    assert( x.rights.isOneOf(ReadOrWrite) )
   }
 
   test

@@ -2,14 +2,13 @@
   * * Interoperate with Java enums
   * * Support Algebraic Data Types (ADTs) because they accept type parameters, and can be Generalized ADTs (GADTs).
   * See http://dotty.epfl.ch/docs/reference/enums/adts.html */
-object EnumTypes extends App {
-  enum ListEnum[+A] {
+@main def EnumTypes =
+  enum ListEnum[+A]
     case Cons(h: A, t: ListEnum[A])
     case Empty
-  }
 
   /** This looks a lot like the [old Java enum example](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html) */
-  enum Planet(mass: Double, radius: Double) {
+  enum Planet(mass: Double, radius: Double) with
     private final val G = 6.67300E-11
 
     def surfaceGravity = G * mass / (radius * radius)
@@ -24,23 +23,19 @@ object EnumTypes extends App {
     case Saturn  extends Planet(5.688e+26, 6.0268e7)
     case Uranus  extends Planet(8.686e+25, 2.5559e7)
     case Neptune extends Planet(1.024e+26, 2.4746e7)
-  }
 
-  def test: Unit = {
+  def test: Unit =
     val emptyList = ListEnum.Empty
     val list = ListEnum.Cons(1, ListEnum.Cons(2, ListEnum.Cons(3, ListEnum.Empty)))
     println(emptyList)
     println(s"$list\n")
 
-    def calculateEarthWeightOnPlanets(earthWeight: Double): Unit = {
+    def calculateEarthWeightOnPlanets(earthWeight: Double): Unit =
       val mass = earthWeight/Planet.Earth.surfaceGravity
       for (p <- Planet.values)
         println(s"Your weight on $p is ${p.surfaceWeight(mass)}")
       ()
-    }
 
     calculateEarthWeightOnPlanets(80)
-  }
 
   test
-}

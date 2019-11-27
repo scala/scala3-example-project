@@ -4,9 +4,8 @@ import scala.language.strictEquality
   * Multiversal Equality: https://dotty.epfl.ch/docs/reference/contextual/multiversal-equality.html
   * scala.Eq definition: https://github.com/lampepfl/dotty/blob/master/library/src/scala/Eql.scala
   */
-  object MultiversalEquality extends App {
-
-  def test: Unit = {
+@main def MultiversalEquality =
+  def test: Unit =
     // Values of types Int and String cannot be compared with == or !=,
     // unless we add the derived delegate instance like:
     given Eql[Int, String] = Eql.derived
@@ -37,7 +36,5 @@ import scala.language.strictEquality
 
     println("a != b: " + (a != b))
     println("b == a: " + (b == a))
-  }
 
   test
-}

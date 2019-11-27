@@ -3,7 +3,7 @@
   runExample("Trait Params")(TraitParams)
   runExample("Typeclasses")(Typeclasses)
   runExample("OpaqueTypes 1")(OpaqueTypes1)
-  runExample("Delegates")(Delegates.test)
+  runExample("Delegates")(Delegates)
   runExample("Context Queries 1")(ContextQueries1)
   runExample("Intersection Types")(IntersectionTypes)
   runExample("Context Queries 2")(ContextQueries2)

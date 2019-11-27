@@ -2,7 +2,7 @@
   runExample("New Syntax")(SyntaxNew)
   runExample("Trait Params")(TraitParams.test)
   runExample("Typeclasses")(Typeclasses.test)
-  runExample("OpaqueTypes 1")(OpaqueTypes1.test)
+  runExample("OpaqueTypes 1")(OpaqueTypes1)
   runExample("Delegates")(Delegates.test)
   runExample("Context Queries 1")(ContextQueries1)
   runExample("Intersection Types")(IntersectionTypes.test)

@@ -7,8 +7,8 @@ import scala.util.Try
   * - Their types are implicit function types.
   * - http://dotty.epfl.ch/docs/reference/contextual/implicit-function-types.html,
   * - Old syntax: https://www.scala-lang.org/blog/2016/12/07/implicit-function-types.html */
-object ContextQueries1 extends App {
-  object context {
+@main def ContextQueries1 =
+  object context with
     // type alias Contextual
     type Contextual[T] = (given ExecutionContext) => T
 
@@ -17,9 +17,8 @@ object ContextQueries1 extends App {
 
     def asyncMult(x: Int, y: Int)
                  (given ctx: ExecutionContext): Contextual[Future[Int]] = Future(x * y)
-  }
 
-  object parse {
+  object parse with
     type Parseable[T] = (given Delegates.StringParser[T]) => Try[T]
 
     def sumStrings(x: String, y: String): Parseable[Int] = {
@@ -32,9 +31,8 @@ object ContextQueries1 extends App {
         b <- tryB
       } yield a + b
     }
-  }
 
-  def test: Unit = {
+  def test: Unit =
     import ExecutionContext.Implicits.global
 
     context.asyncSum(3, 4).foreach(x => println("asyncSum: " + x))
@@ -42,7 +40,5 @@ object ContextQueries1 extends App {
 
     println("""parse.sumStrings("3", "4"): """ + parse.sumStrings("3", "4"))
     println("""parse.sumStrings("3", "a"): """ + parse.sumStrings("3", "a"))
-  }
 
   test
-}

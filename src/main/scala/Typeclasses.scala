@@ -4,7 +4,7 @@
   * * Better error messages than generated from implicits
   * * Implicit conversions will go away
   * See https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates */
-object Typeclasses extends App {
+@main def Typeclasses =
   trait SemiGroup[T] with
     def (x: T) combine (y: T): T
 
@@ -21,4 +21,3 @@ object Typeclasses extends App {
   def test: Unit = println("""sum("a", "b", "c"): """ + sum(List("a", "b", "c")))
 
   test
-}

@@ -1,35 +1,24 @@
 import scala.language.implicitConversions
 
-/** Conversions: http://dotty.epfl.ch/docs/reference/contextual/conversions.html */
-object Conversion extends App {
-  case class IntWrapper(a: Int) extends AnyVal
-  case class DoubleWrapper(b: Double) extends AnyVal
+case class IntWrapper(a: Int) extends AnyVal
+case class DoubleWrapper(b: Double) extends AnyVal
 
+/** Conversions: http://dotty.epfl.ch/docs/reference/contextual/conversions.html */
+@main def Conversion =
   def convert[T, U](t: T)
                    (given converter: Conversion[T, U]): U = converter(t)
 
   given IntWrapperToDoubleWrapper: Conversion[IntWrapper, DoubleWrapper] =
-    new Conversion[IntWrapper, DoubleWrapper] {
+    new Conversion[IntWrapper, DoubleWrapper] with
       override def apply(i: IntWrapper): DoubleWrapper = new DoubleWrapper(i.a.toDouble)
-    }
-
-  def useConversion(given f: Conversion[IntWrapper, DoubleWrapper]) = {
+    
+  def useConversion(given f: Conversion[IntWrapper, DoubleWrapper]) =
     val y: IntWrapper = new IntWrapper(4)
     val x: DoubleWrapper = y
     x
-  }
 
-  /* Not working anymore.
-    def useConversion(implicit f: A => B) = {
-      val y: A = ...
-      val x: B = a    // error under Dotty
-    }
-   */
-
-  def test: Unit = {
+  def test: Unit =
     println(useConversion)
     println(convert(new IntWrapper(42)))
-  }
 
   test
-}

@@ -1,6 +1,6 @@
 # Example sbt Project that Compiles Using Dotty
 
-I (Mike Slinn) fixed many significant bugs in the [upstream project](https://github.com/lampepfl/dotty-example-project) and added code examples for new major features that were missing.
+I (Mike Slinn, founder of [ScalaCourses.com](https://www.ScalaCourses.com)) fixed many significant bugs in the [upstream project](https://github.com/lampepfl/dotty-example-project) and added code examples for new major features that were missing.
 
 ## Usage
 

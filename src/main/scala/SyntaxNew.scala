@@ -1,4 +1,5 @@
-/** See https://dotty.epfl.ch/blog/2019/08/30/18th-dotty-milestone-release.html */
+/** The new and old syntaxes can be mixed freely in one file.
+  * See https://dotty.epfl.ch/blog/2019/08/30/18th-dotty-milestone-release.html */
 
 @main def SyntaxNew =
   println("Hello from SyntaxNew")

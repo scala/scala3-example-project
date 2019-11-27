@@ -1,5 +1,6 @@
 object Main {
   def main(args: Array[String]): Unit = {
+    runExample("New Syntax")(SyntaxNew)
     runExample("Trait Params")(TraitParams.test)
     runExample("Typeclasses")(Typeclasses.test)
     runExample("OpaqueTypes 1")(OpaqueTypes1.test)

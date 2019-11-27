@@ -6,7 +6,7 @@
   runExample("Delegates")(Delegates.test)
   runExample("Context Queries 1")(ContextQueries1)
   runExample("Intersection Types")(IntersectionTypes.test)
-  runExample("Context Queries 2")(ContextQueries2.test)
+  runExample("Context Queries 2")(ContextQueries2)
   runExample("OpaqueTypes 2")(OpaqueTypes2.test)
   runExample("Type Lambda")(TypeLambdas.test)
   runExample("Enum Types")(EnumTypes.test)

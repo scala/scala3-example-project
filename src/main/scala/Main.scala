@@ -8,7 +8,7 @@
   runExample("Intersection Types")(IntersectionTypes)
   runExample("Context Queries 2")(ContextQueries2)
   runExample("OpaqueTypes 2")(OpaqueTypes2)
-  runExample("Type Lambda")(TypeLambdas)
+  runExample("Type Lambdas")(TypeLambdas)
   runExample("Enum Types")(EnumTypes)
   runExample("Conversion")(Conversion)
   runExample("Multiversal Equality")(MultiversalEquality)

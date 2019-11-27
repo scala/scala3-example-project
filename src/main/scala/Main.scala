@@ -7,7 +7,7 @@
   runExample("Context Queries 1")(ContextQueries1)
   runExample("Intersection Types")(IntersectionTypes.test)
   runExample("Context Queries 2")(ContextQueries2)
-  runExample("OpaqueTypes 2")(OpaqueTypes2.test)
+  runExample("OpaqueTypes 2")(OpaqueTypes2)
   runExample("Type Lambda")(TypeLambdas.test)
   runExample("Enum Types")(EnumTypes)
   runExample("Conversion")(Conversion.test)
@@ -15,7 +15,7 @@
   runExample("Named Type Arguments")(NamedTypeArguments)
   runExample("Automatic Functional Parameter Tupling")(AutoParamTupling)
   runExample("Structural Types")(StructuralTypes.test)
-  runExample("Pattern Matching")(PatternMatching.test)
+  runExample("Pattern Matching")(PatternMatching)
   runExample("Union Types")(UnionTypes.test)
 
 private def runExample(name: String)

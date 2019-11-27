@@ -1,5 +1,5 @@
-object OpaqueTypes2 extends App {
-  object Access {
+@main def OpaqueTypes2 =
+  object Access with
     opaque type Permissions = Int
     opaque type PermissionChoice = Int
 
@@ -17,9 +17,8 @@ object OpaqueTypes2 extends App {
     val WriteOnly: Permission = 2
     val ReadWrite: Permissions = ReadOnly | WriteOnly
     val ReadOrWrite: PermissionChoice = ReadOnly | WriteOnly
-  }
 
-  def test: Unit = {
+  def test: Unit =
     import Access._
 
     case class Item(rights: Permissions)
@@ -27,7 +26,5 @@ object OpaqueTypes2 extends App {
     val x = Item(ReadOnly)
     assert( ! x.rights.is(ReadWrite) )
     assert( x.rights.isOneOf(ReadOrWrite) )
-  }
 
   test
-}

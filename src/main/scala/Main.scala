@@ -1,6 +1,6 @@
 @main def Main =
   runExample("New Syntax")(SyntaxNew)
-  runExample("Trait Params")(TraitParams.test)
+  runExample("Trait Params")(TraitParams)
   runExample("Typeclasses")(Typeclasses.test)
   runExample("OpaqueTypes 1")(OpaqueTypes1)
   runExample("Delegates")(Delegates.test)
@@ -14,7 +14,7 @@
   runExample("Multiversal Equality")(MultiversalEquality)
   runExample("Named Type Arguments")(NamedTypeArguments)
   runExample("Automatic Functional Parameter Tupling")(AutoParamTupling)
-  runExample("Structural Types")(StructuralTypes.test)
+  runExample("Structural Types")(StructuralTypes)
   runExample("Pattern Matching")(PatternMatching)
   runExample("Union Types")(UnionTypes.test)
 

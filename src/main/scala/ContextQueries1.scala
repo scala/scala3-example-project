@@ -16,7 +16,8 @@ import scala.util.Try
     def asyncSum(x: Int, y: Int): Contextual[Future[Int]] = Future(x + y)
 
     def asyncMult(x: Int, y: Int)
-                 (given ctx: ExecutionContext): Contextual[Future[Int]] = Future(x * y)
+                 (given ctx: ExecutionContext): Contextual[Future[Int]] =
+                   Future(x * y)
 
   object parse with
     type Parseable[T] = (given Delegates.StringParser[T]) => Try[T]

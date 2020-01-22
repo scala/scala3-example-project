@@ -60,7 +60,7 @@ compatibility mode (note that this mode affects typechecking and thus may
 prevent some valid Dotty code from compiling) by adding to your `build.sbt`:
 
 ```scala
-scalacOptions ++= { if (isDotty.value) Seq("-language:Scala2") else Nil }
+scalacOptions ++= { if (isDotty.value) Seq("-language:Scala2Compat") else Nil }
 ```
 
 Using the `isDotty` setting ensures that this option will only be set when

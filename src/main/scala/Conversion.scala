@@ -8,13 +8,13 @@ object Conversion {
   case class IntWrapper(a: Int) extends AnyVal
   case class DoubleWrapper(b: Double) extends AnyVal
 
-  def convert[T, U](x: T)(given converter: Conversion[T, U]): U = converter(x)
+  def convert[T, U](x: T)(using converter: Conversion[T, U]): U = converter(x)
 
-  given IntWrapperToDoubleWrapper: Conversion[IntWrapper, DoubleWrapper] = new Conversion[IntWrapper, DoubleWrapper] {
+  given IntWrapperToDoubleWrapper as Conversion[IntWrapper, DoubleWrapper] = new Conversion[IntWrapper, DoubleWrapper] {
     override def apply(i: IntWrapper): DoubleWrapper = new DoubleWrapper(i.a.toDouble)
   }
 
-  def useConversion(given f: Conversion[IntWrapper, DoubleWrapper]) = {
+  def useConversion(using f: Conversion[IntWrapper, DoubleWrapper]) = {
     val y: IntWrapper = new IntWrapper(4)
     val x: DoubleWrapper = y
     x

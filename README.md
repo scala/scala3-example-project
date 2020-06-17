@@ -43,7 +43,7 @@ Any version number that starts with `0.` is automatically recognized as Dotty by
 the `sbt-dotty` plugin, you don't need to set up anything:
 
 ```scala
-scalaVersion := "0.25.0-RC1"
+scalaVersion := "0.25.0-RC2"
 ```
 
 #### Nightly builds

@@ -60,14 +60,14 @@ compatibility mode (note that this mode affects typechecking and thus may
 prevent some valid Dotty code from compiling) by adding to your `build.sbt`:
 
 ```scala
-scalacOptions ++= { if (isDotty.value) Seq("-language:Scala2Compat") else Nil }
+scalacOptions ++= { if (isDotty.value) Seq("-source:3.0-migration") else Nil }
 ```
 
 Using the `isDotty` setting ensures that this option will only be set when
-compiling with Dotty.
-
-A tool to port code from Scala 2.x to Dotty is currently in development at
-https://github.com/scalacenter/scalafix
+compiling with Dotty. For more information on the `-source`, see
+http://dotty.epfl.ch/docs/usage/language-versions.html, for more information on
+migrating to Scala 3 see [the migration
+guide](https://github.com/scalacenter/scala-3-migration-guide).
 
 If your build contains dependencies that have only been published for Scala 2.x,
 you may be able to get them to work on Dotty by replacing:

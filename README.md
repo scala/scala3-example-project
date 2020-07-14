@@ -64,7 +64,7 @@ scalacOptions ++= { if (isDotty.value) Seq("-source:3.0-migration") else Nil }
 ```
 
 Using the `isDotty` setting ensures that this option will only be set when
-compiling with Dotty. For more information on the `-source`, see
+compiling with Dotty. For more information on the `-source` flag, see
 http://dotty.epfl.ch/docs/usage/language-versions.html, for more information on
 migrating to Scala 3 see [the migration
 guide](https://github.com/scalacenter/scala-3-migration-guide).

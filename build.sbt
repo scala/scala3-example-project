@@ -5,5 +5,5 @@ lazy val root = project
     description := "Example sbt project that compiles using Dotty",
     version := "0.1.0",
 
-    scalaVersion := "0.26.0-RC1"
+    scalaVersion := "0.27.0-RC1"
   )

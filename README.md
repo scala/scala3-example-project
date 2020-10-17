@@ -27,7 +27,7 @@ You will need to make the following adjustments to your build:
 
 ### project/plugins.sbt
 ```scala
-addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.4.2")
+addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.4.3")
 ```
 
 ### project/build.properties
@@ -49,7 +49,7 @@ scalaVersion := "0.27.0-RC1"
 #### Nightly builds
 If the latest release of Dotty is missing a bugfix or feature you need, you may
 wish to use a nightly build. Look at the bottom of
-https://repo1.maven.org/maven2/ch/epfl/lamp/dotty_0.28/ to find the version
+https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3.0.0-M1/ to find the version
 number for the latest nightly build. Alternatively, you can set `scalaVersion :=
 dottyLatestNightlyBuild.get` to always use the latest nightly build of dotty.
 

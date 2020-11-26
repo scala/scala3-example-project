@@ -43,13 +43,13 @@ Any version number that starts with `0.` is automatically recognized as Dotty by
 the `sbt-dotty` plugin, you don't need to set up anything:
 
 ```scala
-scalaVersion := "3.0.0-M1"
+scalaVersion := "3.0.0-M2"
 ```
 
 #### Nightly builds
 If the latest release of Dotty is missing a bugfix or feature you need, you may
 wish to use a nightly build. Look at the bottom of
-https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3.0.0-M1/ to find the version
+https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3.0.0-RC1/ to find the version
 number for the latest nightly build. Alternatively, you can set `scalaVersion :=
 dottyLatestNightlyBuild.get` to always use the latest nightly build of dotty.
 

@@ -35,7 +35,7 @@ addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.4.6")
 sbt.version=1.3.13
 ```
 
-Older versions of sbt are not supported.
+Older versions of sbt are not supported.  Newer versions (e.g. in the 1.4.x series) also work.
 
 
 ### build.sbt

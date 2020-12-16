@@ -27,15 +27,15 @@ You will need to make the following adjustments to your build:
 
 ### project/plugins.sbt
 ```scala
-addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.4.6")
+addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.5.0")
 ```
 
 ### project/build.properties
 ```scala
-sbt.version=1.3.13
+sbt.version=1.4.5
 ```
 
-Older versions of sbt are not supported.  Newer versions (e.g. in the 1.4.x series) also work.
+You must use sbt 1.4 or newer; older versions of sbt are not supported.
 
 
 ### build.sbt

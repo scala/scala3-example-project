@@ -12,6 +12,7 @@ project/boot/
 project/plugins/project/
 project/local-plugins.sbt
 .history
+.bsp
 
 # Scala-IDE specific
 .scala_dependencies

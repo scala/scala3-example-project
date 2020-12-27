@@ -1,6 +1,6 @@
 # Example sbt project that compiles using Dotty
 
-[![Build Status](https://travis-ci.org/lampepfl/dotty-example-project.svg?branch=master)](https://travis-ci.org/lampepfl/dotty-example-project)
+[![Build Status](https://travis-ci.org/scala/scala3-example-project.svg?branch=master)](https://travis-ci.org/scala/scala3-example-project)
 
 ## Usage
 
@@ -18,8 +18,8 @@ http://dotty.epfl.ch/docs/usage/ide-support.html
 
 ## Making a new Dotty project
 The fastest way to start a new Dotty project is to use one of the following templates:
-* [Simple Dotty project](https://github.com/lampepfl/dotty.g8)
-* [Dotty project that cross-compiles with Scala 2](https://github.com/lampepfl/dotty-cross.g8)
+* [Simple Dotty project](https://github.com/scala/scala3.g8)
+* [Dotty project that cross-compiles with Scala 2](https://github.com/scala/scala3-cross.g8)
 
 ## Using Dotty in an existing project
 

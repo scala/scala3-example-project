@@ -35,4 +35,5 @@ object GivenInstances {
 
     println(implicitly[StringParser[Option[Int]]](StringParser.optionParser[Int]).parse("42"))
   }
+
 }

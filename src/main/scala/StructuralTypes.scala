@@ -24,4 +24,5 @@ object StructuralTypes {
     // age field is java.util.NoSuchElementException: None.get
     //println(invalidPerson.age)
   }
+
 }

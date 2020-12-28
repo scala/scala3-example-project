@@ -58,7 +58,6 @@ object PatternMatching {
   }
 
   def test: Unit = {
-
     import booleanPattern._
 
     "even" match {
@@ -96,7 +95,6 @@ object PatternMatching {
       case Name(n) => println(s"name is $n")
       case _       => println("empty name")
     }
-
   }
 
 }

@@ -32,6 +32,4 @@ object Conversion {
     println(convert(new IntWrapper(42)))
   }
 
-
-
 }

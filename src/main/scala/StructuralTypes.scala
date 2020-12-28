@@ -1,4 +1,3 @@
-
 /**
   * Structural Types: https://dotty.epfl.ch/docs/reference/changed-features/structural-types.html
   */

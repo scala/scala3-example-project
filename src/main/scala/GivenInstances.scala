@@ -1,10 +1,9 @@
 import scala.util.{Success, Try}
 
 /**
-  * Implied Instances:
-  * - https://dotty.epfl.ch/docs/reference/contextual/instance-defs.html
+  * Implied Instances: https://dotty.epfl.ch/docs/reference/contextual/givens.html
   */
-object ImpliedInstances {
+object GivenInstances {
 
   sealed trait StringParser[A] {
     def parse(s: String): Try[A]

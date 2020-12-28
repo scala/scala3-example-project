@@ -1,13 +1,12 @@
-
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.Try
 
 /**
-  * Context Queries:
-  * - http://dotty.epfl.ch/docs/reference/contextual/query-types.html,
+  * Context Functions:
+  * - https://dotty.epfl.ch/docs/reference/contextual/context-functions.html
   * - https://www.scala-lang.org/blog/2016/12/07/implicit-function-types.html
   */
-object ContextQueries /* Formerly known as Implicit Function Types */ {
+object ContextFunctions {
 
   object context {
     // type alias Contextual
@@ -21,10 +20,10 @@ object ContextQueries /* Formerly known as Implicit Function Types */ {
 
   object parse {
 
-    type Parseable[T] = ImpliedInstances.StringParser[T] ?=> Try[T]
+    type Parseable[T] = GivenInstances.StringParser[T] ?=> Try[T]
 
     def sumStrings(x: String, y: String): Parseable[Int] = {
-      val parser = implicitly[ImpliedInstances.StringParser[Int]]
+      val parser = implicitly[GivenInstances.StringParser[Int]]
       val tryA = parser.parse(x)
       val tryB = parser.parse(y)
 

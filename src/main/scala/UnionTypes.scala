@@ -11,7 +11,7 @@ object UnionTypes {
   type DivisionResult = DivisionByZero | Success
 
   sealed trait List[+A]
-  final case class Empty() extends List[Nothing]
+  case object Empty extends List[Nothing]
   final case class Cons[+A](h: A, t: List[A]) extends List[A]
 
   private def safeDivide(a: Double, b: Double): DivisionResult = {
@@ -20,11 +20,10 @@ object UnionTypes {
 
   private def either(division: Division) = division match {
     case DivisionByZero(m) => Left(m)
-    case Success(d) => Right(d)
+    case Success(d)        => Right(d)
   }
 
   def test: Unit = {
-
     val divisionResultSuccess: DivisionResult = safeDivide(4, 2)
 
     // commutative
@@ -36,10 +35,10 @@ object UnionTypes {
     // calling `either` function with union typed value.
     println(either(divisionResultFailure))
 
-    val list: Cons[Int] | Empty = Cons(1, Cons(2, Cons(3, Empty())))
-    val emptyList: Empty | Cons[Any] = Empty()
+    val list: Cons[Int] | Empty.type = Cons(1, Cons(2, Cons(3, Empty)))
+    val emptyList: Empty.type | Cons[Any] = Empty
     println(list)
     println(emptyList)
-
   }
+
 }

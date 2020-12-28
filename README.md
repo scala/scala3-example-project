@@ -17,7 +17,9 @@ Dotty comes built-in with IDE support, to try it out see
 http://dotty.epfl.ch/docs/usage/ide-support.html
 
 ## Making a new Dotty project
+
 The fastest way to start a new Dotty project is to use one of the following templates:
+
 * [Simple Dotty project](https://github.com/scala/scala3.g8)
 * [Dotty project that cross-compiles with Scala 2](https://github.com/scala/scala3-cross.g8)
 
@@ -26,19 +28,21 @@ The fastest way to start a new Dotty project is to use one of the following temp
 You will need to make the following adjustments to your build:
 
 ### project/plugins.sbt
+
 ```scala
 addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.5.1")
 ```
 
 ### project/build.properties
+
 ```scala
-sbt.version=1.4.5
+sbt.version=1.4.6
 ```
 
 You must use sbt 1.4 or newer; older versions of sbt are not supported.
 
-
 ### build.sbt
+
 Any version number that starts with `0.` is automatically recognized as Dotty by
 the `sbt-dotty` plugin, you don't need to set up anything:
 
@@ -47,6 +51,7 @@ scalaVersion := "3.0.0-M3"
 ```
 
 #### Nightly builds
+
 If the latest release of Dotty is missing a bugfix or feature you need, you may
 wish to use a nightly build. Look at the bottom of
 https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3.0.0-RC1/ to find the version

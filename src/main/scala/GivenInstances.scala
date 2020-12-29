@@ -29,11 +29,11 @@ object GivenInstances {
   }
 
   def test: Unit = {
-    println(implicitly[StringParser[Option[Int]]].parse("21"))
-    println(implicitly[StringParser[Option[Int]]].parse(""))
-    println(implicitly[StringParser[Option[Int]]].parse("21a"))
+    println(summon[StringParser[Option[Int]]].parse("21"))
+    println(summon[StringParser[Option[Int]]].parse(""))
+    println(summon[StringParser[Option[Int]]].parse("21a"))
 
-    println(implicitly[StringParser[Option[Int]]](StringParser.optionParser[Int]).parse("42"))
+    println(summon[StringParser[Option[Int]]](using StringParser.optionParser[Int]).parse("42"))
   }
 
 }

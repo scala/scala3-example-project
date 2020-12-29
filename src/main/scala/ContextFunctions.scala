@@ -23,7 +23,7 @@ object ContextFunctions {
     type Parseable[T] = GivenInstances.StringParser[T] ?=> Try[T]
 
     def sumStrings(x: String, y: String): Parseable[Int] = {
-      val parser = implicitly[GivenInstances.StringParser[Int]]
+      val parser = summon[GivenInstances.StringParser[Int]]
       val tryA = parser.parse(x)
       val tryB = parser.parse(y)
 

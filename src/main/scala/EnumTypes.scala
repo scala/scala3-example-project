@@ -24,7 +24,6 @@ object EnumTypes {
   }
 
   def test: Unit = {
-
     val emptyList = ListEnum.Empty
     val list = ListEnum.Cons(1, ListEnum.Cons(2, ListEnum.Cons(3, ListEnum.Empty)))
     println(emptyList)

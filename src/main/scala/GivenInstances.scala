@@ -1,10 +1,9 @@
 import scala.util.{Success, Try}
 
 /**
-  * Implied Instances:
-  * - https://dotty.epfl.ch/docs/reference/contextual/instance-defs.html
+  * Implied Instances: https://dotty.epfl.ch/docs/reference/contextual/givens.html
   */
-object ImpliedInstances {
+object GivenInstances {
 
   sealed trait StringParser[A] {
     def parse(s: String): Try[A]
@@ -30,10 +29,11 @@ object ImpliedInstances {
   }
 
   def test: Unit = {
-    println(implicitly[StringParser[Option[Int]]].parse("21"))
-    println(implicitly[StringParser[Option[Int]]].parse(""))
-    println(implicitly[StringParser[Option[Int]]].parse("21a"))
+    println(summon[StringParser[Option[Int]]].parse("21"))
+    println(summon[StringParser[Option[Int]]].parse(""))
+    println(summon[StringParser[Option[Int]]].parse("21a"))
 
-    println(implicitly[StringParser[Option[Int]]](StringParser.optionParser[Int]).parse("42"))
+    println(summon[StringParser[Option[Int]]](using StringParser.optionParser[Int]).parse("42"))
   }
+
 }

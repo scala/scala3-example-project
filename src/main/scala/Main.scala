@@ -1,4 +1,3 @@
-
 object Main {
 
   def main(args: Array[String]): Unit = {
@@ -7,9 +6,9 @@ object Main {
 
     runExample("Enum Types")(EnumTypes.test)
 
-    runExample("Context Queries")(ContextQueries.test)
+    runExample("Context Functions")(ContextFunctions.test)
 
-    runExample("Implied Instances")(ImpliedInstances.test)
+    runExample("Given Instances")(GivenInstances.test)
 
     runExample("Conversion")(Conversion.test)
 
@@ -21,7 +20,7 @@ object Main {
 
     runExample("Multiversal Equality")(MultiversalEquality.test)
 
-    runExample("Auto Param Tupling")(AutoParamTupling.test)
+    runExample("Parameter Untupling")(ParameterUntupling.test)
 
     runExample("Structural Types")(StructuralTypes.test)
 

@@ -1,4 +1,3 @@
-
 /**
   * Pattern Matching: https://dotty.epfl.ch/docs/reference/changed-features/pattern-matching.html
   */
@@ -59,19 +58,17 @@ object PatternMatching {
   }
 
   def test: Unit = {
-
     import booleanPattern._
 
     "even" match {
       case s @ Even() => println(s"$s has an even number of characters")
-      case s => println(s"$s has an odd number of characters")
+      case s          => println(s"$s has an odd number of characters")
     }
 
-    // http://dotty.epfl.ch/docs/reference/changed/vararg-patterns.html
+    // http://dotty.epfl.ch/docs/reference/changed-features/vararg-patterns.html
     def containsConsecutive(list: List[Int]): Boolean = list match {
-      case List(a, b, xs: _ *) => if (a == b) true else containsConsecutive(b :: xs.toList)
-      case List(a, _ : _*) => false
-      case Nil => false
+      case List(a, b, xs: _*)   => if (a == b) true else containsConsecutive(b :: xs.toList)
+      case Nil | List(_, _: _*) => false
     }
 
     println(containsConsecutive(List(1, 2, 3, 4, 5)))
@@ -86,7 +83,7 @@ object PatternMatching {
 
     def greet(fullName: String) = fullName match {
       case Names(lastName, firstName, _: _*) => "Good morning, " + firstName + " " + lastName + "!"
-      case _ => "Welcome! Please make sure to fill in your name!"
+      case _                                 => "Welcome! Please make sure to fill in your name!"
     }
 
     println(greet("Alan Turing"))
@@ -96,8 +93,8 @@ object PatternMatching {
     import namePattern._
     "alice" match {
       case Name(n) => println(s"name is $n")
-      case _ => println("empty name")
+      case _       => println("empty name")
     }
-
   }
+
 }

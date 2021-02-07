@@ -33,7 +33,7 @@ object PatternMatching {
 
   object seqPattern {
 
-    // adapted from http://danielwestheide.com/blog/2012/11/28/the-neophytes-guide-to-scala-part-2-extracting-sequences.html
+    // adapted from https://danielwestheide.com/blog/the-neophytes-guide-to-scala-part-2-extracting-sequences/
     object Names {
       def unapplySeq(name: String): Option[Seq[String]] = {
         val names = name.trim.split(" ")

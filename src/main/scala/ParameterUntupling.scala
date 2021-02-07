@@ -6,7 +6,7 @@ object ParameterUntupling {
   def test: Unit = {
     /**
       * In order to get thread safety, you need to put @volatile before lazy vals.
-      * https://dotty.epfl.ch/docs/reference/changed-features/lazy-vals.html
+      * https://dotty.epfl.ch/docs/reference/changed-features/lazy-vals-init.html
       */
     @volatile lazy val xs: List[String] = List("d", "o", "t", "t", "y")
 

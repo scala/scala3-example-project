@@ -1,5 +1,5 @@
 /**
-  * Enum Types: http://dotty.epfl.ch/docs/reference/enums/adts.html
+  * Enum Types: https://dotty.epfl.ch/docs/reference/enums/adts.html
   */
 object EnumTypes {
 

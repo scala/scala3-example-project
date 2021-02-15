@@ -33,7 +33,7 @@ object PatternMatching {
 
   object seqPattern {
 
-    // adapted from http://danielwestheide.com/blog/2012/11/28/the-neophytes-guide-to-scala-part-2-extracting-sequences.html
+    // adapted from https://danielwestheide.com/blog/the-neophytes-guide-to-scala-part-2-extracting-sequences/
     object Names {
       def unapplySeq(name: String): Option[Seq[String]] = {
         val names = name.trim.split(" ")
@@ -65,7 +65,7 @@ object PatternMatching {
       case s          => println(s"$s has an odd number of characters")
     }
 
-    // http://dotty.epfl.ch/docs/reference/changed-features/vararg-patterns.html
+    // https://dotty.epfl.ch/docs/reference/changed-features/vararg-patterns.html
     def containsConsecutive(list: List[Int]): Boolean = list match {
       case List(a, b, xs: _*)   => if (a == b) true else containsConsecutive(b :: xs.toList)
       case Nil | List(_, _: _*) => false

@@ -1,7 +1,7 @@
 import scala.language.implicitConversions
 
 /**
-  *  Conversions: https://dotty.epfl.ch/docs/reference/contextual/conversions.html
+  * Conversions: https://dotty.epfl.ch/docs/reference/contextual/conversions.html
   */
 object Conversion {
 

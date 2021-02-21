@@ -34,7 +34,7 @@ object ContextFunctions {
     }
   }
 
-  def test: Unit = {
+  def test(): Unit = {
     import ExecutionContext.Implicits.global
     context.asyncSum(3, 4).foreach(println)
     context.asyncMult(3, 4).foreach(println)

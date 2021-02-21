@@ -1,14 +1,14 @@
 /**
   * Enum Types: https://dotty.epfl.ch/docs/reference/enums/adts.html
   */
-object EnumTypes {
+object  EnumTypes:
 
-  enum ListEnum[+A] {
+  enum ListEnum[+A]: 
     case Cons(h: A, t: ListEnum[A])
     case Empty
-  }
+  
 
-  enum Planet(mass: Double, radius: Double) {
+  enum Planet(mass: Double, radius: Double):
     private final val G = 6.67300E-11
     def surfaceGravity = G * mass / (radius * radius)
     def surfaceWeight(otherMass: Double) =  otherMass * surfaceGravity
@@ -21,21 +21,19 @@ object EnumTypes {
     case Saturn  extends Planet(5.688e+26, 6.0268e7)
     case Uranus  extends Planet(8.686e+25, 2.5559e7)
     case Neptune extends Planet(1.024e+26, 2.4746e7)
-  }
+  end Planet
 
-  def test: Unit = {
+  def test(): Unit =
     val emptyList = ListEnum.Empty
     val list = ListEnum.Cons(1, ListEnum.Cons(2, ListEnum.Cons(3, ListEnum.Empty)))
-    println(emptyList)
+    println("Example 1: \n"+emptyList)
     println(s"${list}\n")
 
-    def calculateEarthWeightOnPlanets(earthWeight: Double) = {
+    def calculateEarthWeightOnPlanets(earthWeight: Double) =
       val mass = earthWeight/Planet.Earth.surfaceGravity
-      for (p <- Planet.values)
+      for p <- Planet.values do
         println(s"Your weight on $p is ${p.surfaceWeight(mass)}")
-    }
 
+    println("Example 2:")
     calculateEarthWeightOnPlanets(80)
-  }
-
-}
+  end test

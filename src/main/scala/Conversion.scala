@@ -13,6 +13,9 @@ object Conversion:
   given IntWrapperToDoubleWrapper: Conversion[IntWrapper, DoubleWrapper] = new Conversion[IntWrapper, DoubleWrapper] {
     override def apply(i: IntWrapper): DoubleWrapper = DoubleWrapper(i.a.toDouble)
   }
+  // Or:
+  // given IntWrapperToDoubleWrapper: Conversion[IntWrapper, DoubleWrapper] = 
+  //   (i: IntWrapper) => DoubleWrapper(i.a.toDouble)
 
   def useConversion(using f: Conversion[IntWrapper, DoubleWrapper]) =
     val y: IntWrapper = IntWrapper(4)

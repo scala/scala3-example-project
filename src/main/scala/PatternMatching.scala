@@ -47,7 +47,7 @@ object PatternMatching:
 
 
   def test(): Unit =
-    import booleanPattern._
+    import booleanPattern.*
 
     "even" match
       case s @ Even() => println(s"$s has an even number of characters")

@@ -57,7 +57,7 @@ object PatternMatching {
 
   }
 
-  def test: Unit = {
+  def test(): Unit = {
     import booleanPattern._
 
     "even" match {

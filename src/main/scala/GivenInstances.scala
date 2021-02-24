@@ -28,7 +28,7 @@ object GivenInstances {
     }
   }
 
-  def test: Unit = {
+  def test(): Unit = {
     println(summon[StringParser[Option[Int]]].parse("21"))
     println(summon[StringParser[Option[Int]]].parse(""))
     println(summon[StringParser[Option[Int]]].parse("21a"))

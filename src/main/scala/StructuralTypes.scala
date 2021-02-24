@@ -16,7 +16,7 @@ object StructuralTypes {
 
   val invalidPerson = Record("name" -> "John", "salary" -> 42).asInstanceOf[Person]
 
-  def test: Unit = {
+  def test(): Unit = {
     println(person.name)
     println(person.age)
 

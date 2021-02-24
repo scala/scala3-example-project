@@ -23,7 +23,7 @@ object EnumTypes {
     case Neptune extends Planet(1.024e+26, 2.4746e7)
   }
 
-  def test: Unit = {
+  def test(): Unit = {
     val emptyList = ListEnum.Empty
     val list = ListEnum.Cons(1, ListEnum.Cons(2, ListEnum.Cons(3, ListEnum.Empty)))
     println(emptyList)

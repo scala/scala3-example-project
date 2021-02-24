@@ -23,7 +23,7 @@ object UnionTypes {
     case Success(d)        => Right(d)
   }
 
-  def test: Unit = {
+  def test(): Unit = {
     val divisionResultSuccess: DivisionResult = safeDivide(4, 2)
 
     // commutative

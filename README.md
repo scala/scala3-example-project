@@ -1,6 +1,6 @@
 # Example sbt project that compiles using Dotty
 
-[![Build Status](https://travis-ci.org/scala/scala3-example-project.svg?branch=master)](https://travis-ci.org/scala/scala3-example-project)
+[![Build Status](https://travis-ci.com/scala/scala3-example-project.svg?branch=master)](https://travis-ci.com/scala/scala3-example-project)
 
 ## Usage
 

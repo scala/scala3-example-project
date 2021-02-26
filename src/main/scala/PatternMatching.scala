@@ -54,29 +54,30 @@ object PatternMatching:
       case s          => println(s"$s has an odd number of characters")
 
     // https://dotty.epfl.ch/docs/reference/changed-features/vararg-splices.html
-    def containsConsecutive(list: List[Int]): Boolean = list match
-      case List(a, b, xs: _*)   => if a == b then true else containsConsecutive(b :: xs.toList)
-      case Nil | List(_, _: _*) => false
+    def containsConsecutive(list: List[Int]): Boolean = list match {
+      case List(a, b, xs*)   => a == b || containsConsecutive(b :: xs.toList)
+      case Nil | List(_, _*) => false
+    }
 
     println(containsConsecutive(List(1, 2, 3, 4, 5)))
     println(containsConsecutive(List(1, 2, 3, 3, 5)))
 
-    import productPattern._
-    ("john", 42) match
+    import productPattern.*
+    ("john", 42) match 
       case Person(n, a) => println(s"name: $n, age: $a")
 
-    import seqPattern._
+    import seqPattern.*
 
-    def greet(fullName: String) = fullName match
-      case Names(lastName, firstName, _: _*) => "Good morning, " + firstName + " " + lastName + "!"
-      case _                                 => "Welcome! Please make sure to fill in your name!"
-
+    def greet(fullName: String) = fullName match 
+      case Names(lastName, firstName, _*) => "Good morning, " + firstName + " " + lastName + "!"
+      case _                              => "Welcome! Please make sure to fill in your name!"
+    
     println(greet("Alan Turing"))
     println(greet("john"))
     println(greet("Wolfgang Amadeus Mozart"))
 
-    import namePattern._
-    "alice" match
+    import namePattern.*
+    "alice" match 
       case Name(n) => println(s"name is $n")
       case _       => println("empty name")
 

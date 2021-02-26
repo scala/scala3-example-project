@@ -14,6 +14,6 @@ object TraitParams:
     printMessages(new A, new B)
 
     // Sanity check the classpath: this won't run if the Scala 3 jar is not present.
-    val x: Int => Int = z => z
+    val x: Int => Int = identity
     x(1)
 

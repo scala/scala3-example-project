@@ -25,7 +25,7 @@ object Conversion:
   /* Not working anymore.
     def useConversion(implicit f: A => B) = {
       val y: A = ...
-      val x: B = a    // error under Dotty
+      val x: B = a    // error under Scala 3
     }
    */
 

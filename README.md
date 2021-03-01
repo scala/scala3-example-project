@@ -34,8 +34,8 @@ addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.5.3")
 ```
 
 Here, _dotty_ is the project name for technologies that are considered for inclusion in Scala 3.
-Since the development of Scala 3 is not done, the word _dotty_ and _Dotty_ are still can be seen
-in some names of Scala 3 related tools, sbt plugins, etc.
+Since the development of Scala 3 is not done, the word _dotty_ and _Dotty_ still can be seen in
+some names of Scala 3 related tools, sbt plugins, etc.
 
 ### project/build.properties
 

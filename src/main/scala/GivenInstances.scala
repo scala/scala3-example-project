@@ -29,6 +29,5 @@ object GivenInstances:
     println(summon[StringParser[Option[Int]]].parse("21"))
     println(summon[StringParser[Option[Int]]].parse(""))
     println(summon[StringParser[Option[Int]]].parse("21a"))
-
     println(summon[StringParser[Option[Int]]](using StringParser.optionParser[Int]).parse("42"))
 

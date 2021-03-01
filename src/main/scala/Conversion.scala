@@ -1,7 +1,7 @@
 import scala.language.implicitConversions
 
 /**
-  * Conversions: https://dotty.epfl.ch/docs/reference/contextual/conversions.html
+  *  Conversions: https://dotty.epfl.ch/docs/reference/contextual/conversions.html
   */
 object Conversion:
 
@@ -13,9 +13,6 @@ object Conversion:
   given IntWrapperToDoubleWrapper: Conversion[IntWrapper, DoubleWrapper] = new Conversion[IntWrapper, DoubleWrapper] {
     override def apply(i: IntWrapper): DoubleWrapper = DoubleWrapper(i.a.toDouble)
   }
-  // Or:
-  // given IntWrapperToDoubleWrapper: Conversion[IntWrapper, DoubleWrapper] = 
-  //   (i: IntWrapper) => DoubleWrapper(i.a.toDouble)
 
   def useConversion(using f: Conversion[IntWrapper, DoubleWrapper]) =
     val y: IntWrapper = IntWrapper(4)
@@ -25,7 +22,7 @@ object Conversion:
   /* Not working anymore.
     def useConversion(implicit f: A => B) = {
       val y: A = ...
-      val x: B = a    // error under Scala 3
+      val x: B = a    // error under Dotty
     }
    */
 

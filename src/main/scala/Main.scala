@@ -1,4 +1,4 @@
-def main(args: Array[String]): Unit = 
+def main(args: Array[String]): Unit =
   runExample("Trait Params")(TraitParams.test())
 
   runExample("Enum Types")(EnumTypes.test())

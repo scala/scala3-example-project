@@ -1,4 +1,4 @@
-def main(args: Array[String]): Unit = {
+def main(args: Array[String]): Unit =
 
   runExample("Trait Params")(TraitParams.test())
 
@@ -23,11 +23,9 @@ def main(args: Array[String]): Unit = {
   runExample("Structural Types")(StructuralTypes.test())
 
   runExample("Pattern Matching")(PatternMatching.test())
+end main
 
-}
-
-private def runExample(name: String)(f: => Unit): Unit = {
+private def runExample(name: String)(f: => Unit): Unit =
   println(Console.MAGENTA + s"$name example:" + Console.RESET)
   f
   println()
-}

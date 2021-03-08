@@ -57,7 +57,7 @@ scalaVersion := "3.0.0-RC1"
 
 If the latest release of Scala 3 is missing a bugfix or feature you need, you may
 wish to use a nightly build. Look at the bottom of the list of
-[releases](https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3.0.0-RC1/)
+[releases](https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3.0.0-RC2/)
 to find the version number for the latest nightly build. Alternatively, you can set
 `scalaVersion := dottyLatestNightlyBuild.get` to always use the latest nightly build of Scala 3.
 

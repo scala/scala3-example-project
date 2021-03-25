@@ -1,0 +1,12 @@
+version: ~> 1.0 # needed for imports
+import: scala/scala-dev:travis/default.yml
+
+language: scala
+
+env:
+  - ADOPTOPENJDK=8
+  - ADOPTOPENJDK=11
+
+script:
+  - sbt run
+  - sbt 'set scalaVersion := dottyLatestNightlyBuild.get' run

@@ -25,7 +25,10 @@ jobs:
         scala:
           - 3.0.0-RC1
           - 3.0.0-RC2-bin-20210325-eeb8340-NIGHTLY
-        java: [adopt@1.8, adopt@11, adopt@16]
+        java:
+          - adopt@1.8.0-275
+          - adopt@1.11.0-9
+          - adopt@1.15.0-1
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout current branch (full)

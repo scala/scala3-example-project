@@ -12,7 +12,7 @@ lazy val root = project
     skip in publish := true
   )
 
-ThisBuild / githubWorkflowJavaVersions := Seq("adopt@1.8", "adopt@11", "adopt@16")
+ThisBuild / githubWorkflowJavaVersions := Seq("adopt@1.8.0-275", "adopt@1.11.0-9", "adopt@1.15.0-1")
 ThisBuild / githubWorkflowScalaVersions := crossVersions
 ThisBuild / githubWorkflowBuildPreamble ++= Seq(WorkflowStep.Sbt(List("run")))
 ThisBuild / githubWorkflowPublishTargetBranches := Nil

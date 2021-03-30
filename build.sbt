@@ -1,5 +1,5 @@
 lazy val rcVersion = "3.0.0-RC2"
-lazy val crossVersions = Seq(Option(rcVersion), dottyLatestNightlyBuild()).flatten
+lazy val crossVersions = Seq(Option(rcVersion)).flatten
 lazy val root = project
   .in(file("."))
   .settings(
@@ -8,7 +8,6 @@ lazy val root = project
     version := "0.1.0",
     scalaVersion := rcVersion,
     crossScalaVersions := crossVersions,
-    useScala3doc := true,
     skip in publish := true
   )
 

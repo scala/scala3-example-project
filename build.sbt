@@ -1,4 +1,4 @@
-lazy val rcVersion = "3.0.0-RC1"
+lazy val rcVersion = "3.0.0-RC2"
 lazy val crossVersions = Seq(Option(rcVersion), dottyLatestNightlyBuild()).flatten
 lazy val root = project
   .in(file("."))

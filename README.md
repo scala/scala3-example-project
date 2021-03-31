@@ -1,6 +1,6 @@
 # Example sbt project that compiles using Scala 3
 
-[![Build Status](https://github.com/scala/scala3-example-project/workflows/CI/badge.svg?branch=main)](https://github.com/scala/scala3-example-project/workflows/CI/badge.svg?branch=main)
+[![Continuous Integration](https://github.com/scala/scala3-example-project/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/scala/scala3-example-project/actions/workflows/ci.yml)
 
 ## Usage
 

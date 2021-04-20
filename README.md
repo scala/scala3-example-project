@@ -30,10 +30,10 @@ You will need to make the following adjustments to your build:
 ### project/build.properties
 
 ```scala
-sbt.version=1.5.0-RC2
+sbt.version=1.5.0
 ```
 
-You must use sbt 1.5.0-RC2 or newer; older versions of sbt are not supported.
+You must use sbt 1.5.0 or newer; older versions of sbt are not supported.
 
 ### build.sbt
 

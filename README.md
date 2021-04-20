@@ -52,7 +52,7 @@ For help with porting an existing Scala 2 project to Scala 3, see the
 
 If the latest release of Scala 3 is missing a bugfix or feature you need, you may
 wish to use a nightly build. Look at the bottom of the list of
-[releases](https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3.0.1-RC1/)
+[releases](https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3/)
 to find the version number for the latest nightly build.
 
 ## Discuss

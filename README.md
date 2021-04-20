@@ -40,7 +40,7 @@ You must use sbt 1.5.0 or newer; older versions of sbt are not supported.
 Set up the Scala 3 version:
 
 ```scala
-scalaVersion := "3.0.0-RC2"
+scalaVersion := "3.0.0-RC3"
 ```
 
 ### Getting your project to compile with Scala 3

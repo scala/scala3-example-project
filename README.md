@@ -30,7 +30,7 @@ You will need to make the following adjustments to your build:
 ### project/build.properties
 
 ```
-sbt.version=1.5.7
+sbt.version=1.5.8
 ```
 
 You must use sbt 1.5.5 or newer; older versions of sbt are not supported.

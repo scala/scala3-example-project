@@ -12,10 +12,7 @@ jobs:
     name: Build and Run
     strategy:
       matrix:
-        java:
-          - adopt@1.8.0-275
-          - adopt@1.11.0-9
-          - adopt@1.15.0-1
+        java-version: [8, 11, 17]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout current branch (full)
@@ -23,10 +20,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Java and Scala
-        uses: olafurpg/setup-scala@v10
+      - name: Setup Java
+        uses: actions/setup-java@v2
         with:
-          java-version: ${{ matrix.java }}
+          distribution: temurin
+          java-version: ${{ matrix.java-version }}
 
       - name: Cache sbt
         uses: actions/cache@v2

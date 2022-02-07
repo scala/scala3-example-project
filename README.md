@@ -4,17 +4,12 @@
 
 ## Usage
 
-This is a normal sbt project, you can compile code with `sbt compile` and run it
-with `sbt run`, `sbt console` will start a Scala 3 REPL.
+This is a normal sbt project. You can compile code with `sbt compile` and run it
+with `sbt run`. `sbt console` will start a Scala 3 REPL.
 
 If compiling this example project fails, you probably have a global sbt plugin
-that does not work with Scala 3, try to disable all plugins in
+that does not work with Scala 3. You might try disabling plugins in
 `~/.sbt/1.0/plugins` and `~/.sbt/1.0`.
-
-### IDE support
-
-Scala 3 comes built-in with IDE support, to try it out see
-[IDE support for Scala 3](http://dotty.epfl.ch/docs/usage/ide-support.html)
 
 ## Making a new Scala 3 project
 
@@ -40,7 +35,7 @@ You must use sbt 1.5.5 or newer; older versions of sbt are not supported.
 Set up the Scala 3 version:
 
 ```scala
-scalaVersion := "3.1.0"
+scalaVersion := "3.1.1"
 ```
 
 ### Getting your project to compile with Scala 3
@@ -48,14 +43,6 @@ scalaVersion := "3.1.0"
 For help with porting an existing Scala 2 project to Scala 3, see the
 [Scala 3 migration guide](https://scalacenter.github.io/scala-3-migration-guide/).
 
-#### Nightly builds
+## Need help?
 
-If the latest release of Scala 3 is missing a bugfix or feature you need, you may
-wish to use a nightly build. Look at the bottom of the list of
-[releases](https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3/)
-to find the version number for the latest nightly build.
-
-## Discuss
-
-Feel free to come chat with us on the
-[Scala 3 gitter](http://gitter.im/lampepfl/dotty)!
+https://www.scala-lang.org/community/ has links.

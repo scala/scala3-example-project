@@ -4,8 +4,8 @@
 
 ## Usage
 
-This is a normal sbt project. You can compile code with `sbt compile` and run it
-with `sbt run`. `sbt console` will start a Scala 3 REPL.
+This is a normal sbt project. You can compile code with `sbt compile`, run the main
+method with `sbt run` and run the tests with `sbt test`. `sbt console` will start a Scala 3 REPL.
 
 If compiling this example project fails, you probably have a global sbt plugin
 that does not work with Scala 3. You might try disabling plugins in

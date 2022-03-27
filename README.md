@@ -41,7 +41,7 @@ scalaVersion := "3.1.1"
 ### Getting your project to compile with Scala 3
 
 For help with porting an existing Scala 2 project to Scala 3, see the
-[Scala 3 migration guide](https://scalacenter.github.io/scala-3-migration-guide/).
+[Scala 3 migration guide](https://docs.scala-lang.org/scala3/guides/migration/compatibility-intro.html).
 
 ## Need help?
 

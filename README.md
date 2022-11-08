@@ -32,10 +32,10 @@ You must use sbt 1.5.5 or newer; older versions of sbt are not supported.
 
 ### build.sbt
 
-Set up the Scala 3 version:
+Set the Scala 3 version:
 
 ```scala
-scalaVersion := "3.2.0"
+scalaVersion := "3.2.1"
 ```
 
 ### Getting your project to compile with Scala 3

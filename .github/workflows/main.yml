@@ -1,0 +1,41 @@
+# This workflow is to automate Checkmarx SCA scans.  It runs on a push to the main branch.
+#
+# The following GitHub Secrets must be first defined:
+#   - CHECKMARX_SCA_USERNAME
+#   - CHECKMARX_SCA_PASSWORD
+#
+# The following variables must be inserted below:
+#   - <ProjectName>
+#   - <SCATenant>
+#   - <GitHubRepoUrl>
+#
+# For full documentation, including a list of all inputs, please refer to the README https://github.com/checkmarx-ts/checkmarx-cxflow-github-action
+
+name: Checkmarx SCA Scan
+on:
+  push:
+    branches:
+      - main
+      - master
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Checkmarx CxFlow Action
+      ##uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.4 # GitHub Action version
+      uses: n3d4u2c/checkmarx-cxflow-github-action@master
+      with:
+        project: SBTTest  # <-- Insert Checkmarx CxSCA Project Name
+        sca_api_url: https://api.scacheckmarx.com
+        sca_app_url: https://sca.scacheckmarx.com
+        sca_access_control_url: https://platform.checkmarx.net
+        sca_tenant: SCA-Champions  # <-- Insert Checkmarx CxSCA Tenant
+        sca_username: ${{ secrets.CHECKMARX_SCA_USERNAME }} # To be stored in GitHub Secrets.
+        sca_password: ${{ secrets.CHECKMARX_SCA_PASSWORD }} # To be stored in GitHub Secrets.
+        break_build: false
+        scanners: sca
+        bug_tracker: None
+        params: --sca.enable-sca-resolver=true --sca.include-sources=false --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --repo-url="<GitHubRepoUrl>" --cx-flow.filterSeverity --cx-flow.filterCategory

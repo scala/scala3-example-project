@@ -7,4 +7,7 @@ lazy val root = project
     scalaVersion := "3.2.2",
     scalacOptions ++= Seq("-deprecation"),
     libraryDependencies += "org.scalameta" %% "munit" % "0.7.29" % Test
+    libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.15"
+    libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.15" % "test"
+    resolvers += "Artima Maven Repository" at "https://repo.artima.com/releases"
   )

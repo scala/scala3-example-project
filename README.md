@@ -46,3 +46,4 @@ For help with porting an existing Scala 2 project to Scala 3, see the
 ## Need help?
 
 https://www.scala-lang.org/community/ has links.
+https://www.scala-lang.org/community/ has links.

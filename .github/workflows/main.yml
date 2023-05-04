@@ -28,7 +28,7 @@ jobs:
       ##uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.4 # GitHub Action version
       uses: n3d4u2c/checkmarx-cxflow-github-action@master #modified to install sbt
       with:
-        project: scala3-example-project  # <-- Insert Checkmarx CxSCA Project Name
+        project: scala3-example-project-git  # <-- Insert Checkmarx CxSCA Project Name
         sca_api_url: https://api.scacheckmarx.com
         sca_app_url: https://sca.scacheckmarx.com
         sca_access_control_url: https://platform.checkmarx.net

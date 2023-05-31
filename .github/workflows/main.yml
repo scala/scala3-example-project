@@ -36,5 +36,6 @@ jobs:
         break_build: false
         scanners: sca
         bug_tracker: None
-        params: --logging.level.org.springframework.web.client.RestTemplate=TRACE --logging.level.com.checkmarx.flow.service=DEBUG --logging.level.org.apache.http.wire=TRACE --sca.enable-sca-resolver=true --sca.include-sources=false --sca.path-to-sca-resolver=/scar --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --repo-url="<GitHubRepoUrl>" --cx-flow.filterSeverity --cx-flow.filterCategory
+        params: --logging.level.org.springframework.web.client.RestTemplate=TRACE --logging.level.com.checkmarx.flow.service=DEBUG --logging.level.org.apache.http.wire=TRACE --sca.enable-sca-resolver=true --sca.include-sources=false --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --repo-url="<GitHubRepoUrl>" --cx-flow.filterSeverity --cx-flow.filterCategory
         ##--sca.sca-resolver-add-parameters.log-level=Debug --sca.sca-resolver-add-parameters.e=*.ext1
+        ##--sca.path-to-sca-resolver=/scar

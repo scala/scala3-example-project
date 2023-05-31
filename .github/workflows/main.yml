@@ -45,3 +45,5 @@ jobs:
       run: |
           echo "Logs"
           ls -l /tmp
+          ls -l /mnt
+          ls -l /data

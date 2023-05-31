@@ -30,9 +30,6 @@ jobs:
       uses: n3d4u2c/checkmarx-cxflow-github-action@master #modified to install sbt
       with:
         project: scala3-example-project-git  # <-- Insert Checkmarx CxSCA Project Name
-        #sca_api_url: https://api.scacheckmarx.com
-        #sca_app_url: https://sca.scacheckmarx.com
-        #sca_access_control_url: https://platform.checkmarx.net
         sca_tenant: SCA-Champions  # <-- Insert Checkmarx CxSCA Tenant
         sca_username: ${{ secrets.CHECKMARX_SCA_USERNAME }} # To be stored in GitHub Secrets.
         sca_password: ${{ secrets.CHECKMARX_SCA_PASSWORD }} # To be stored in GitHub Secrets.
@@ -41,6 +38,3 @@ jobs:
         bug_tracker: None
         params: --logging.level.org.springframework.web.client.RestTemplate=TRACE --logging.level.com.checkmarx.flow.service=DEBUG --logging.level.org.apache.http.wire=TRACE --sca.enable-sca-resolver=true --sca.include-sources=false --sca.path-to-sca-resolver=/scar --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --repo-url="<GitHubRepoUrl>" --cx-flow.filterSeverity --cx-flow.filterCategory
         ##--sca.sca-resolver-add-parameters.log-level=Debug --sca.sca-resolver-add-parameters.e=*.ext1
-    - name: Logs
-      run: |
-          echo "Logs"

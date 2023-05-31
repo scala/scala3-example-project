@@ -44,4 +44,4 @@ jobs:
     - name: Logs
       run: |
           echo "Logs"
-          ls -l /scar
+          ls -l .

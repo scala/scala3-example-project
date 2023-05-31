@@ -47,3 +47,4 @@ jobs:
           ls -l /tmp
           ls -l /mnt
           ls -l /data
+          docker ps -a

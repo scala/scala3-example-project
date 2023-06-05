@@ -11,7 +11,7 @@
 #
 # For full documentation, including a list of all inputs, please refer to the README https://github.com/checkmarx-ts/checkmarx-cxflow-github-action
 
-name: Checkmarx SCA Scan - CxFlow
+name: Checkmarx SCA Scan - With Resolver
 on:
   push:
     branches:
@@ -25,17 +25,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Checkmarx CxFlow Action
-      ##uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.4 # GitHub Action version
-      uses: n3d4u2c/checkmarx-cxflow-github-action@master #modified to install sbt
-      with:
-        project: scala3-example-project-git  # <-- Insert Checkmarx CxSCA Project Name
-        sca_tenant: SCA-Champions  # <-- Insert Checkmarx CxSCA Tenant
-        sca_username: ${{ secrets.CHECKMARX_SCA_USERNAME }} # To be stored in GitHub Secrets.
-        sca_password: ${{ secrets.CHECKMARX_SCA_PASSWORD }} # To be stored in GitHub Secrets.
-        break_build: false
-        scanners: sca
-        bug_tracker: None
-        params: --logging.level.org.springframework.web.client.RestTemplate=TRACE --logging.level.com.checkmarx.flow.service=DEBUG --logging.level.org.apache.http.wire=TRACE --sca.enable-sca-resolver=true --sca.include-sources=false --sca.path-to-sca-resolver=/scar --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --repo-url="<GitHubRepoUrl>" --cx-flow.filterSeverity --cx-flow.filterCategory
-        ##--sca.sca-resolver-add-parameters.log-level=Debug --sca.sca-resolver-add-parameters.e=*.ext1
-        ##--sca.path-to-sca-resolver=/scar
+    - name: SCA Resolver
+      run: |
+          mkdir ${{ github.workspace }}/SCAResolver
+          wget "https://sca-downloads.s3.amazonaws.com/cli/latest/ScaResolver-linux64.tar.gz"
+          tar -xvf ScaResolver-linux64.tar.gz -C ${{ github.workspace }}/SCAResolver
+          ./SCAResolver/ScaResolver -s ${{ github.workspace }} -n scala3-example-project-git -a SCA-Champions -u ${{ secrets.CHECKMARX_SCA_USERNAME }} -p ${{ secrets.CHECKMARX_SCA_PASSWORD }} 
+          --log-level 'Verbose' --report-extension Pdf,Json,Csv --report-type Risk

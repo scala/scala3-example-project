@@ -6,5 +6,5 @@ lazy val root = project
     version := "0.1.0",
     scalaVersion := "3.4.2",
     scalacOptions ++= Seq("-deprecation"),
-    libraryDependencies += "org.scalameta" %% "munit" % "1.0.0" % Test
+    libraryDependencies += "org.scalameta" %% "munit" % "1.0.1" % Test
   )

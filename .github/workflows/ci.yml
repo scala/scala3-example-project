@@ -27,6 +27,8 @@ jobs:
           java-version: ${{ matrix.java-version }}
           cache: sbt
 
+      - uses: sbt/setup-sbt@v1
+
       - name: Run the project
         run: sbt run
 

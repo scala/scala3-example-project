@@ -35,7 +35,7 @@ You must use sbt 1.5.5 or newer; older versions of sbt are not supported.
 Set the Scala 3 version:
 
 ```scala
-scalaVersion := "3.7.3"
+scalaVersion := "3.7.4"
 ```
 
 ### Getting your project to compile with Scala 3

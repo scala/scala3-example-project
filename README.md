@@ -28,15 +28,15 @@ You will need to make the following adjustments to your build:
 sbt.version=1.12.3
 ```
 
-You must use sbt 1.5.5 or newer; older versions of sbt are not supported.
-
 ### build.sbt
 
 Set the Scala 3 version:
 
 ```scala
-scalaVersion := "3.7.4"
+scalaVersion := "3.8.1"
 ```
+
+Note that as of Scala 3.8, you need JDK 17 or higher.
 
 ### Getting your project to compile with Scala 3
 

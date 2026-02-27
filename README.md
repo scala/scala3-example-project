@@ -33,7 +33,7 @@ sbt.version=1.12.4
 Set the Scala 3 version:
 
 ```scala
-scalaVersion := "3.8.1"
+scalaVersion := "3.8.2"
 ```
 
 Note that as of Scala 3.8, you need JDK 17 or higher.

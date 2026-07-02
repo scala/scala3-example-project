@@ -25,7 +25,7 @@ You will need to make the following adjustments to your build:
 ### project/build.properties
 
 ```
-sbt.version=2.0.0
+sbt.version=2.0.1
 ```
 
 ### build.sbt

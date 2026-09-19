@@ -1,5 +1,5 @@
 /**
-  * Type Lambdas: https://dotty.epfl.ch/docs/reference/new-types/type-lambdas.html
+  * Type Lambdas: https://nightly.scala-lang.org/docs/reference/new-types/type-lambdas.html
   */
 object TypeLambdas:
 

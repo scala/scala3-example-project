@@ -1,7 +1,7 @@
 import scala.util.{Success, Try}
 
 /**
-  * Implied Instances: https://dotty.epfl.ch/docs/reference/contextual/givens.html
+  * Implied Instances: https://nightly.scala-lang.org/docs/reference/contextual/givens.html
   */
 object GivenInstances:
 

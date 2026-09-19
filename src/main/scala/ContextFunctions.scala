@@ -3,7 +3,7 @@ import scala.util.Try
 
 /**
   * Context Functions:
-  *  - https://dotty.epfl.ch/docs/reference/contextual/context-functions.html
+  *  - https://nightly.scala-lang.org/docs/reference/contextual/context-functions.html
   *  - https://www.scala-lang.org/blog/2016/12/07/implicit-function-types.html
   */
 object ContextFunctions:

@@ -1,5 +1,5 @@
 /**
-  * Pattern Matching: https://dotty.epfl.ch/docs/reference/changed-features/pattern-matching.html
+  * Pattern Matching: https://nightly.scala-lang.org/docs/reference/changed-features/pattern-matching.html
   */
 object PatternMatching:
 
@@ -53,7 +53,7 @@ object PatternMatching:
       case s @ Even() => println(s"$s has an even number of characters")
       case s          => println(s"$s has an odd number of characters")
 
-    // https://dotty.epfl.ch/docs/reference/changed-features/vararg-splices.html
+    // https://nightly.scala-lang.org/docs/reference/changed-features/vararg-splices.html
     def containsConsecutive(list: List[Int]): Boolean = list match 
       case List(a, b, xs*)   => a == b || containsConsecutive(b :: xs.toList)
       case Nil | List(_, _*) => false

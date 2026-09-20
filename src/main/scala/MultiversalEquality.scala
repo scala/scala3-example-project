@@ -1,8 +1,8 @@
 import scala.language.strictEquality
 
 /**
-  * Multiversal Equality: https://dotty.epfl.ch/docs/reference/contextual/multiversal-equality.html
-  * scala.CanEqual definition: https://github.com/lampepfl/dotty/blob/master/library/src/scala/CanEqual.scala
+  * Multiversal Equality: https://nightly.scala-lang.org/docs/reference/contextual/multiversal-equality.html
+  * scala.CanEqual definition: https://github.com/scala/scala3/blob/main/library/src/scala/CanEqual.scala
   */
 object MultiversalEquality:
 

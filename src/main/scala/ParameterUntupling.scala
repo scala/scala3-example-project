@@ -1,5 +1,5 @@
 /**
-  * Parameter Untupling: https://dotty.epfl.ch/docs/reference/other-new-features/parameter-untupling.html
+  * Parameter Untupling: https://nightly.scala-lang.org/docs/reference/other-new-features/parameter-untupling.html
   */
 object ParameterUntupling:
 

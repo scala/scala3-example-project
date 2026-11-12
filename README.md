@@ -25,7 +25,7 @@ You will need to make the following adjustments to your build:
 ### project/build.properties
 
 ```
-sbt.version=2.0.4
+sbt.version=2.0.12
 ```
 
 ### build.sbt
@@ -33,7 +33,7 @@ sbt.version=2.0.4
 Set the Scala 3 version:
 
 ```scala
-scalaVersion := "3.8.4"
+scalaVersion := "3.10.1"
 ```
 
 Note that as of Scala 3.8, you need JDK 17 or higher.
